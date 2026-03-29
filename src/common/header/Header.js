@@ -5,7 +5,6 @@ import Nav from './Nav';
 import MobileMenu from './MobileMenu';
 import LogoBox from './LogoBox';
 import OffCanvasStyleOne from './OffCanvasStyleOne';
-import NiceSelect from './NiceSelect';
 
 export default class Header extends React.Component {
     render(){

@@ -125,19 +125,18 @@ const NavIcon = styled(Link)`
     margin-left: 20px;
 `;
 
+// Inside MobileMenu.js
 const SidebarNav = styled.nav`
-    background-color: #001659;
-    width: 300px;
-    height: 100%;
-    position: fixed;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    -webkit-scroll-behavior: smooth;
-    box-shadow: 0 13px 35px -12px rgba(35, 35, 35, 0.15);
-    top: 0;
-    right: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
-    transition: 350ms;
-    z-index: 99999;
+  background: #12265a;
+  width: 300px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
+  transition: 350ms;
+  z-index: 9999;  
 `;
 
 const SidebarWrap = styled.div`
@@ -161,7 +160,7 @@ const MobileMenu = () => {
                     <SidebarWrap>
                         <div className="mobile-nav__content">
                             <div className="logo-box">
-                                <Link to={process.env.PUBLIC_URL + `/`} aria-label="logo image"><img src={publicUrl+"assets/images/resources/logo-1.png"} width="155" alt="" /></Link>
+                                <Link to={process.env.PUBLIC_URL + `/`} aria-label="logo image"><img className='img-fluid w-25' src={publicUrl+"assets/images/resources/stricky-logo.png"} width="155" alt="" /></Link>
                             </div>
                             <NavIcon to="#">
                                 <AiIcons.AiOutlineClose

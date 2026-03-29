@@ -32,9 +32,7 @@ function OffCanvasStyleOne() {
                                         <div className="content-box">
                                             <h4>About Us</h4>
                                             <div className="inner-text">
-                                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
-                                                    roots in a piece of classical Latin literature from 45 BC, making it over
-                                                    2000 years old.
+                                                <p>SKV Industriees is a premier engineering and fabrication firm based in Namakkal, Tamil Nadu. Specializing in high-precision Electrical, Instrumentation, and Civil works, we serve the critical needs of the Oil, Gas, Power, and Industrial sectors. With a focus on technical excellence and safety, we transform complex engineering challenges into reliable infrastructure solutions.
                                                 </p>
                                             </div>
                                         </div>
@@ -61,15 +59,15 @@ function OffCanvasStyleOne() {
                                             <h4>Contact Info</h4>
                                             <ul>
                                                 <li>
-                                                    <span className=" icon-maps-and-flags"></span> 88 broklyn street, New York
+                                                    <span className=" icon-maps-and-flags "></span>S.F.No: 1/2B, Nachipatti,Vennandur, Rasipuram (Tk),Namakkal, Tamil Nadu - 637505.
                                                 </li>
                                                 <li>
                                                     <span className="icon-phone-call-1"></span>
-                                                    <a href="tel:123456789">+1 555-9990-153</a>
+                                                    <a href="tel:+918883999999">8883999999</a>
                                                 </li>
                                                 <li>
                                                     <span className="icon-email-1"></span>
-                                                    <a href="mailto:info@example.com">info@example.com</a>
+                                                    <a href="mailto:skvindu@yahoo.com ">skvindu@yahoo.com </a>
                                                 </li>
                                             </ul>
                                         </div>

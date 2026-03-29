@@ -515,6 +515,10 @@ button {
     cursor: url(../images/icon/cross-out.png), pointer;
 }
 
+.offcanvas-body{
+    border: 2px solid red;
+}
+
 .offcanvas-backdrop {
     opacity: .6!important;
     visibility: visible;
@@ -531,7 +535,7 @@ button {
     bottom: 0;
     width: 100%;
     max-width: 400px;
-    background-color: var(--thm-black);
+    background-color: rgb(0, 0, 0);
     overflow: hidden;
     overflow-y: auto;
     -webkit-transform: translateX(-300px);
@@ -579,7 +583,7 @@ button {
     width: 100%;
     opacity: .8;
     z-index: 0;
-    background-color: #000000;
+    background-color: rgb(0, 0, 0,0.0);
 }
 
 .xs-sidebar-group .close-side-widget {
@@ -1184,25 +1188,24 @@ button {
     left: 0;
     width: 100vw;
     height: 100vh;
+    z-index: 9999 !important; 
+    
+    /* When active, make sure these are updated via a class (e.g., .expanded) */
+    visibility: hidden; 
     opacity: 0;
-    transform: translateX(-50%);
-    transform-origin: right center;
-    transition: transform 500ms ease-in, opacity 500ms linear, visibility 500ms ease-in;
-    z-index: 999;
-    visibility: hidden;
+}
+
+/* Add this to your JS toggle class for the mobile nav */
+.mobile-nav__wrapper.expanded {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .mobile-nav__wrapper .container {
     padding-left: 0;
     padding-right: 0;
 }
-
-.mobile-nav__wrapper.expanded {
-    opacity: 1;
-    transform: translateX(0%);
-    visibility: visible;
-}
-
 .mobile-nav__overlay {
     position: absolute;
     top: 0;
@@ -1216,8 +1219,8 @@ button {
 
 .mobile-nav__content {
     width: 300px;
-    background: var(--thm-black);
-    z-index: 10;
+    /* background: var(--thm-black); */
+    z-index: 999 !important;
     position: relative;
     height: 100%;
     overflow-y: auto;
@@ -1414,103 +1417,6 @@ a.sc-hLBbgP {
 
 /***
 =============================================
-    Search Popup
-=============================================
-***/
-
-.search-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9999;
-    padding-left: 20px;
-    padding-right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(-110%);
-    transition: transform 500ms ease, opacity 500ms ease;
-}
-
-.search-popup.active {
-    transform: translateY(0%);
-}
-
-.search-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--thm-black);
-    opacity: 0.9;
-    cursor: pointer;
-    padding: 400px 0;
-}
-
-.search-overlay .modal-content {
-    width: 100%;
-    max-width: 560px;
-}
-
-.search-overlay .modal-content form {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    background-color: #fff;
-    border-radius: 0px;
-    overflow: hidden;
-}
-
-.search-overlay .modal-content form input[type="search"],
-.search-overlay .modal-content form input[type="text"] {
-    width: 100%;
-    background-color: #fff;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    height: 66px;
-    padding-left: 30px;
-    padding-right: 90px;
-}
-
-.search-overlay .modal-content .thm-btn2 {
-    padding: 0;
-    width: 68px;
-    height: 68px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    right: -1px;
-    border-radius: 0;
-    background-color: var(--thm-base);
-    border: none;
-    transition: all 200ms linear;
-    transition-delay: 0.1s;
-}
-
-.search-overlay .modal-content .thm-btn2::before {
-    display: none;
-}
-
-.search-overlay .modal-content .thm-btn2:hover {
-    background-color: var(--thm-black);
-    color: #ffffff;
-}
-
-.search-overlay .modal-content .thm-btn2 i::before {
-    margin: 0;
-    color: #ffffff;
-}
-
-
-/***
-=============================================
     Main Header One
 =============================================
 ***/
@@ -1692,7 +1598,7 @@ a.sc-hLBbgP {
     display: block;
     width: 30px;
     height: 3px;
-    background: #ffffff;
+    background: #2222;
     margin: 5px 0;
     transition: all 200ms linear;
     transition-delay: 0.1s;
@@ -9261,7 +9167,10 @@ footer .icon-box {
 
 .side-content-button-box {
     position: relative;
-    display: block;
+    /* display: block; */
+    display: flex;
+    align-items: center;
+    padding: 10px;
     padding-left: 20px;
 }
 
@@ -12166,10 +12075,9 @@ Faq One Faq
     right: 20px;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Space between buttons */
-    z-index: 9999;
+    gap: 15px;
+    z-index: 200;  /* ✅ Remove !important, keep it above page content but below sidebar */
 }
-
 .btn-floating {
     width: 60px;
     height: 60px;
@@ -12195,3 +12103,26 @@ Faq One Faq
 .btn-call {
     background-color: #0e0dce; /* Using your requested blue color */
 }
+/* Force the side-content button to be visible */
+.navSidebar-button {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.navSidebar-button .decor {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #222222 !important; /* Force color to black */
+    margin-bottom: 6px;
+    transition: all 0.3s ease;
+}
+
+/* If the header is sticky/dark, make lines white */
+.stricky-fixed .navSidebar-button .decor {
+    background-color: #ffffff !important;
+}
+
