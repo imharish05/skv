@@ -12,7 +12,7 @@ const FloatingContact = () => {
 
     useEffect(() => {
         const toggleVisibility = () => {
-            if (window.scrollY > 100 && !isHomePage) {
+            if (window.scrollY > 100) {
                 setIsVisible(true);
             } else {
                 setIsVisible(false);
@@ -30,7 +30,7 @@ const FloatingContact = () => {
             
             {/* WhatsApp - Original Green */}
             <a href={`https://wa.me/${phoneNumber}`} 
-               className="btn-floating bg-success text-white shadow-lg" 
+               className="btn-floating text-white shadow-lg" 
                target="_blank" rel="noopener noreferrer">
                 <IoLogoWhatsapp/>
             </a>
