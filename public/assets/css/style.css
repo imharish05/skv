@@ -458,44 +458,7 @@ button {
     margin-top: 30px;
 }
 
-/***
-=============================================
-    Scroll To Top 
-=============================================
-***/
-.scroll-to-top {
-    position: relative!important;
-    display: inline-block!important;
-    width: 60px!important;
-    height: 70px!important;
-    background: var(--thm-base)!important;
-    position: fixed!important;
-    bottom: 93px!important;
-    right: 20px!important;
-    z-index: 99!important;
-    border-top-left-radius: 10px!important;
-    border-top-right-radius: 10px!important;
-    text-align: center!important;
-    transition: all 0.4s ease!important;
-    transition: all 0.4s ease!important;
-    overflow: hidden!important;
-}
 
-.scroll-to-top svg {
-    position: relative!important;
-    display: inline-block!important;
-    color: #ffffff!important;
-    font-size: 18px!important;
-    line-height: 70px!important;
-}
-
-.scroll-to-top:hover {
-    background-color: var(--thm-black)!important;
-}
-
-.scroll-to-top:hover svg {
-    color: #fff!important;
-}
 
 /***
 =============================================
@@ -1189,8 +1152,6 @@ button {
     width: 100vw;
     height: 100vh;
     z-index: 9999 !important; 
-    
-    /* When active, make sure these are updated via a class (e.g., .expanded) */
     visibility: hidden; 
     opacity: 0;
 }
@@ -12126,3 +12087,23 @@ Faq One Faq
     background-color: #ffffff !important;
 }
 
+/* Mobile Menu open-la irukkum pothu Floating Buttons-ai hide panna */
+body:has(.mobile-nav__wrapper.expanded) .floating-container,
+body:has(nav[style*="right: 0"]) .floating-container {
+    display: none !important;
+}
+
+/* Common Mobile Styles */
+@media (max-width: 991px) {
+    .floating-container {
+        display: flex; 
+        bottom: 35px;
+        right: 15px;
+        z-index: 90 !important;
+    }
+
+    .btn-floating {
+        width: 45px;
+        height: 45px;
+    }
+}

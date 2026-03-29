@@ -60,6 +60,7 @@ const SidebarLink = styled(Link)`
     text-decoration: none;
     font-size: 16px;
     font-weight: 400;
+    z-index : 999
     &:hover {
         background: #ff5e14;
         color: #fff;
@@ -71,6 +72,7 @@ const SidebarLabel = styled.span`
     margin-left: 16px;
     color: #fff;
     font-weight: 400;
+    z-index : 999
 `;
 
 const DropdownLink = styled(Link)`
@@ -81,6 +83,7 @@ const DropdownLink = styled(Link)`
     text-decoration: none;
     color: #fff;
     font-size: 16px;
+    z-index : 999
     &:hover,
     &:active {
         background: #ff5e14;
@@ -123,6 +126,7 @@ const NavIcon = styled(Link)`
     display: flex;
     align-items: center;
     margin-left: 20px;
+    z-index : 999
 `;
 
 // Inside MobileMenu.js
@@ -136,11 +140,12 @@ const SidebarNav = styled.nav`
   top: 0;
   right: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
   transition: 350ms;
-  z-index: 9999;  
+  z-index : 999
 `;
 
 const SidebarWrap = styled.div`
     width: 100%;
+    z-index : 999
 `;
 
 const MobileMenu = () => {
@@ -152,7 +157,7 @@ const MobileMenu = () => {
     return (
         <>
             <>
-                <NavIcon to="#" style={{ justifyContent: 'flex-end' }}>
+                <NavIcon to="#" style={{ justifyContent: 'flex-end'}}>
                     <AiOutlineBars onClick={showSidebar} />
                 </NavIcon>
 
