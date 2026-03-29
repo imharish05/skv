@@ -25,24 +25,22 @@ const FloatingContact = () => {
     if (isHomePage) return null;
 
     return (
-        <div className={`floating-container ${isVisible ? 'opacity-100' : 'opacity-0'}`} 
-             style={{ transition: 'opacity 0.4s ease', pointerEvents: isVisible ? 'auto' : 'none' }}>
-            
+        <div className='floating-container'>
             {/* WhatsApp - Original Green */}
             <a href={`https://wa.me/${phoneNumber}`} 
-               className="btn-floating bg-success text-white shadow-lg" 
+               className="btn-floating btn-whatsapp text-white shadow-lg" 
                target="_blank" rel="noopener noreferrer">
                 <IoLogoWhatsapp/>
             </a>
 
             {/* Phone - Your Blue or BS Primary */}
             <a href={`tel:${phoneNumber}`} 
-               className="btn-floating bg-primary text-white shadow-lg">
+               className="btn-floating btn-call  text-white shadow-lg">
                 <FaPhoneAlt />
             </a>
 
             {/* Scroll Top - Black Background */}
-            <button 
+            <button style={{opacity :isVisible ? '1' : '0'  , transition: 'opacity 0.4s ease', pointerEvents: isVisible ? 'auto' : 'none' }}
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
                 className="btn-floating bg-dark text-white shadow-lg border-0">
                 <FaAngleUp/>
