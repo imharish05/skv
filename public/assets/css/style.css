@@ -11848,7 +11848,7 @@ Faq One Faq
     display: block;
     width: 100%;
     height: 2px;
-    background-color: #222222 !important; /* Force color to black */
+    background-color: #ffffff !important; /* Force color to black */
     margin-bottom: 6px;
     transition: all 0.3s ease;
 }
@@ -11947,25 +11947,3 @@ body.mobile-menu-active .floating-container {
     z-index: 90 !important; /* Ensures it is always behind menu */
 }
 
-.social-nav-item {
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    color: #ffffff;
-    font-size: 14px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.social-nav-item:hover {
-    background: #ff5e14; /* Your theme orange */
-    color: #ffffff;
-    border-color: #ff5e14;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 94, 20, 0.3);
-}
