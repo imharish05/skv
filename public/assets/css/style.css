@@ -4223,7 +4223,7 @@ a.sc-hLBbgP {
 .brand-one-sec {
     position: relative;
     display: block;
-    background: var(--thm-base);
+    /* background: rgb(0, 0, 0,0.2); */
     padding: 100px 0px 100px;
     z-index: 1;
 }
