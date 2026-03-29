@@ -9,7 +9,7 @@ export default class ContactForm extends React.Component {
                         <div className="row">
                             <div className="col-xl-4 col-lg-4 col-md-5">
                                 <div className="contact-page__content">
-                                    <div className="title">
+                                    <div className="title pt-3">
                                         <h2>Get In Touch</h2>
                                     </div>
 
@@ -21,7 +21,7 @@ export default class ContactForm extends React.Component {
 
                                             <div className="content-box">
                                                 <h2>Address</h2>
-                                                <p>46 suvastu arcade, 3rd Floor <br /> palace road, London.</p>
+                                                <p>S.F.NO:1/2B,PERIYATHOTTAM, NACHIPATTI, RASIPURAM MAIN ROAD VENNANDUR (Po), RASIPURAM Tk<br /> NAMAKKAL Dt.PIN-637505.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -34,8 +34,7 @@ export default class ContactForm extends React.Component {
 
                                             <div className="content-box">
                                                 <h2>Phone</h2>
-                                                <p className="number1"><a href="tel:123456789">88 256 256 2584</a></p>
-                                                <p className="number2"><a href="tel:123456789">88 256 256 2584</a></p>
+                                                <p className="number1"><a href="tel:+918883999999">8883999999</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -48,8 +47,7 @@ export default class ContactForm extends React.Component {
 
                                             <div className="content-box">
                                                 <h2>Email </h2>
-                                                <p className="email1"><a href="mailto:info@madina.com">info@madina.com</a></p>
-                                                <p className="email2"><a href="mailto:info@madina.com">info@madina.com</a></p>
+                                                <p className="email1"><a href="mailto:skvindu@yahoo.com ">skvindu@yahoo.com</a></p>
                                             </div>
                                         </div>
                                     </div>

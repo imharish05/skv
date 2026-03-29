@@ -8,12 +8,9 @@ export default class ContactMap extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-xl-12">
-                                <iframe
-                                    title="Address"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
-                                    className="contact-page-google-map__one" allowfullscreen>
-                                </iframe>
-                            </div>
+<div className="col-xl-12">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d952053.7448734435!2d77.5447978!3d11.2944796!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babe65c9a6e1db9%3A0x6aa2e8efa045da96!2sSKV%20Industries%20RDSO%20Approved%20firm.!5e1!3m2!1sen!2sin!4v1774774214341!5m2!1sen!2sin" className="contact-page-google-map__one" allowfullscreen></iframe>
+                            </div>                            </div>
                         </div>
                     </div>
                 </div>
