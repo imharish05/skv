@@ -1,207 +1,134 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as AiIcons from 'react-icons/ai';
 import { AiOutlineBars } from 'react-icons/ai';
-import { CgChevronDown, CgChevronLeft } from 'react-icons/cg';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const menuData = [
-    {
-        title: 'Home',
-        path: '/',
-        iconClosed: <CgChevronLeft />,
-        iconOpened: <CgChevronDown />,
-    },
-    {
-        title: 'About',
-        path: '/about',
-        iconClosed: <CgChevronLeft />,
-        iconOpened: <CgChevronDown />,
-    },
-
-    {
-        title: 'Services',
-        path: '/services',
-
-        iconClosed: <CgChevronLeft />,
-        iconOpened: <CgChevronDown />,
-    },
-
-    {
-        title: 'Projects',
-        path: '/projects',
-
-        iconClosed: <CgChevronLeft />,
-        iconOpened: <CgChevronDown />,
-    },
-
-    {
-        title: 'Blog',
-        path: '/blog',
-
-        iconClosed: <CgChevronLeft />,
-        iconOpened: <CgChevronDown />,
-    },
-
-    {
-        title: 'Contact',
-        path: '/contact',
-    },
+    { title: 'Home', path: '' },
+    { title: 'About', path: 'about' },
+    { title: 'Services', path: 'services' },
+    { title: 'Projects', path: 'projects' },
+    { title: 'Contact', path: 'contact' },
 ];
+
+const SidebarNav = styled.nav`
+  background: rgb(41, 121, 255,0.9);
+  width: 300px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
+  transition: 450ms cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 10001; 
+  box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+`;
 
 const SidebarLink = styled(Link)`
     display: flex;
     color: #fff;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    list-style: none;
-    height: 50px;
+    padding: 15px 25px;
     text-decoration: none;
     font-size: 16px;
-    font-weight: 400;
-    z-index : 999
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    transition: 0.3s;
     &:hover {
-        background: #ff5e14;
-        color: #fff;
-        cursor: pointer;
+        background: rgba(255, 94, 20, 0.1);
+        color: #ff5e14;
+        padding-left: 35px;
     }
-`;
-
-const SidebarLabel = styled.span`
-    margin-left: 16px;
-    color: #fff;
-    font-weight: 400;
-    z-index : 999
-`;
-
-const DropdownLink = styled(Link)`
-    height: 60px;
-    padding-left: 3rem;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    z-index : 999
-    &:hover,
-    &:active {
-        background: #ff5e14;
-        cursor: pointer;
-        color: #fff;
-    }
-`;
-
-const SubMenu = ({ item }) => {
-    const [subnav, setSubnav] = useState(false);
-
-    const showSubnav = () => setSubnav(!subnav);
-
-    return (
-        <>
-            <SidebarLink to={process.env.PUBLIC_URL + `${item.path}`} onClick={item.subNav && showSubnav}>
-                <div>
-                    {item.icon}
-                    <SidebarLabel>{item.title}</SidebarLabel>
-                </div>
-                <div>
-                    {item.subNav && subnav ? item.iconOpened : item.subNav ? item.iconClosed : null}
-                </div>
-            </SidebarLink>
-            {subnav &&
-                item.subNav.map((data, index) => (
-                    <DropdownLink to={process.env.PUBLIC_URL + `${data.path}`} key={index}>
-                        {item.icon}
-                        <SidebarLabel>{data.title}</SidebarLabel>
-                    </DropdownLink>
-                ))}
-        </>
-    );
-};
-
-const NavIcon = styled(Link)`
-    color: #ff5e14;
-    font-size: 2rem;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-    z-index : 999
-`;
-
-// Inside MobileMenu.js
-const SidebarNav = styled.nav`
-  background: #12265a;
-  width: 300px;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  right: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
-  transition: 350ms;
-  z-index : 999
-`;
-
-const SidebarWrap = styled.div`
-    width: 100%;
-    z-index : 999
 `;
 
 const MobileMenu = () => {
     const [sidebar, setSidebar] = useState(false);
-
     const showSidebar = () => setSidebar(!sidebar);
-    let publicUrl = process.env.PUBLIC_URL+'/'
+    const publicUrl = process.env.PUBLIC_URL + '/';
+
+    useEffect(() => {
+        if (sidebar) {
+            document.body.classList.add('mobile-menu-active');
+        } else {
+            document.body.classList.remove('mobile-menu-active');
+        }
+    }, [sidebar]);
 
     return (
         <>
-            <>
-                <NavIcon to="#" style={{ justifyContent: 'flex-end'}}>
-                    <AiOutlineBars onClick={showSidebar} />
-                </NavIcon>
+            <Link to="#" className="d-flex d-lg-none justify-content-end" onClick={showSidebar} style={{ color: '#ff5e14', fontSize: '2rem', display: 'flex', justifyContent: 'flex-end', marginRight: '20px'}}>
+                <AiOutlineBars />
+            </Link>
 
-                <SidebarNav sidebar={sidebar}>
-                    <SidebarWrap>
-                        <div className="mobile-nav__content">
-                            <div className="logo-box">
-                                <Link to={process.env.PUBLIC_URL + `/`} aria-label="logo image"><img className='img-fluid w-25' src={publicUrl+"assets/images/resources/stricky-logo.png"} width="155" alt="" /></Link>
+            <SidebarNav sidebar={sidebar}>
+                {/* Header Section */}
+                <div style={{display:'flex', justifyContent:'space-between', padding:'20px 25px', alignItems:'center'}}>
+                    <Link to={publicUrl} onClick={showSidebar}>
+                        <img src={publicUrl + "assets/images/resources/stricky-logo.png"} width="60" alt="logo" />
+                    </Link>
+                    <div onClick={showSidebar} style={{background: 'rgba(255,255,255,0.1)', width: '35px', height: '35px', borderRadius: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center', cursor: 'pointer'}}>
+                        <AiIcons.AiOutlineClose style={{color: 'white', fontSize: '18px'}} />
+                    </div>
+                </div>
+                
+                {/* Navigation Links */}
+                <div style={{overflowY: 'auto'}}>
+                    {menuData.map((item, index) => (
+                        <SidebarLink to={publicUrl + item.path} key={index} onClick={showSidebar}>
+                            <span>{item.title}</span>
+                            <AiIcons.AiOutlineRight style={{fontSize: '12px', opacity: 0.5}} />
+                        </SidebarLink>
+                    ))}
+                </div>
+
+                {/* Modern Contact Card Section */}
+                <div style={{ padding: '20px', background: 'rgba(0,0,0,0.2)', borderRadius: '25px'}}>
+                    <div className="contact-card-mini">
+                        <a href="mailto:skvindu@yahoo.com" className="contact-item">
+                            <div className="icon-wrap"><i className="fa fa-envelope"></i></div>
+                            <div className="text-wrap">
+                                <label>Email Us</label>
+                                <span>skvindu@yahoo.com</span>
                             </div>
-                            <NavIcon to="#">
-                                <AiIcons.AiOutlineClose
-                                    style={{
-                                        color: 'white',
-                                        fontSize: '18px',
-                                        justifyContent: 'flex-start',
-                                    }}
-                                    onClick={showSidebar}
-                                />
-                            </NavIcon>
-                            {menuData.map((item, index) => (
-                                <SubMenu item={item} key={index} />
-                            ))}
-                            <ul className="mobile-nav__contact list-unstyled">
-                                <li>
-                                    <i className="fa fa-envelope" aria-hidden="true"></i>
-                                    <a href="mailto:needhelp@packageName__.com">needhelp@const.com</a>
-                                </li>
-                                <li>
-                                    <i className="fa fa-phone" aria-hidden="true"></i>
-                                    <a href="tel:666-888-0000">666 888 0000</a>
-                                </li>
-                            </ul>
-                            <div className="mobile-nav__top">
-                                <div className="mobile-nav__social">
-                                    <a href="https://twitter.com/"><span className="fab fa-twitter"></span></a>
-                                    <a href="https://facebook.com/"><span className="fab fa-facebook-square"></span></a>
-                                    <a href="https://pinterest.com/"><span className="fab fa-pinterest-p"></span></a>
-                                    <a href="https://instagram.com/"><span className="fab fa-instagram"></span></a>
-                                </div>
+                        </a>
+                        <a href="tel:8883999999" className="contact-item">
+                            <div className="icon-wrap"><i className="fa fa-phone"></i></div>
+                            <div className="text-wrap">
+                                <label>Call Us</label>
+                                <span>+91 88839 99999</span>
                             </div>
-                        </div>
-                    </SidebarWrap>
-                </SidebarNav>
-            </>
+                        </a>
+                    </div>
+                </div>
+
+                {/* Social Links Block */}
+<div style={{ 
+    padding: '15px 25px 25px', 
+    display: 'flex', 
+    alignItems: 'center', 
+    gap: '15px' 
+}}>
+    <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-nav-item">
+        <i className="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://twitter.com" target="_blank" rel="noreferrer" className="social-nav-item">
+        <i className="fab fa-twitter"></i>
+    </a>
+    <a href="https://instagram.com" target="_blank" rel="noreferrer" className="social-nav-item">
+        <i className="fab fa-instagram"></i>
+    </a>
+    <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-nav-item">
+        <i className="fab fa-linkedin-in"></i>
+    </a>
+</div>
+                
+                
+            </SidebarNav>
+
+            {sidebar && <div onClick={showSidebar} className="nav-overlay"></div>}
         </>
     );
 };

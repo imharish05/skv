@@ -1145,236 +1145,7 @@ button {
     Mobile Nav
 =============================================
 ***/
-.mobile-nav__wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9999 !important; 
-    visibility: hidden; 
-    opacity: 0;
-}
 
-/* Add this to your JS toggle class for the mobile nav */
-.mobile-nav__wrapper.expanded {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.mobile-nav__wrapper .container {
-    padding-left: 0;
-    padding-right: 0;
-}
-.mobile-nav__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #000000;
-    opacity: 0.5;
-    cursor: pointer;
-}
-
-.mobile-nav__content {
-    width: 300px;
-    /* background: var(--thm-black); */
-    z-index: 999 !important;
-    position: relative;
-    height: 100%;
-    overflow-y: auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.mobile-nav__content .thm-btn {
-    padding: 8px 0;
-    width: 100%;
-    text-align: center;
-}
-
-.mobile-nav__content .logo-box {
-    margin-bottom: 40px;
-    display: flex;
-}
-
-.mobile-nav__close {
-    position: absolute;
-    top: 20px;
-    right: 15px;
-    font-size: 18px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.mobile-nav__content .main-menu__list,
-.mobile-nav__content .main-menu__list ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.mobile-nav__content .main-menu__list ul {
-    display: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.mobile-nav__content .main-menu__list li:not(:last-child) {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.mobile-nav__content .main-menu__list li ul {
-    padding-left: 10px;
-}
-
-.mobile-nav__content .main-menu__list li a {
-    display: flex;
-    justify-content: space-between;
-    line-height: 30px;
-    color: #ffffff;
-    font-size: 16px;
-    font-family: var(--thm-font);
-    font-weight: 400;
-    height: 46px;
-    align-items: center;
-    transition: 500ms;
-}
-
-.mobile-nav__content .main-menu__list li a.expanded {
-    color: var(--thm-base);
-}
-
-.mobile-nav__content .main-menu__list li a:hover {
-    color: var(--thm-base);
-}
-
-.mobile-nav__content .main-menu__list li a button {
-    width: 28px;
-    height: 28px;
-    background-color: var(--thm-base);
-    border: none;
-    outline: none;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transform: rotate(-90deg);
-    border-radius: 0px;
-    transition: transform 500ms ease;
-}
-
-.mobile-nav__content .main-menu__list li a button.expanded {
-    transform: rotate(0deg);
-    background-color: #fff;
-    color: var(--thm-black);
-}
-
-.mobile-nav__content .main-menu__list li.cart-btn span {
-    position: relative;
-    top: auto;
-    right: auto;
-    transform: translate(0, 0);
-}
-
-.mobile-nav__content .main-menu__list li.cart-btn i {
-    font-size: 16px;
-}
-
-.mobile-nav__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    margin-left: 32px;
-}
-
-.mobile-nav__top .main-menu__login a {
-    color: var(--thm-text-dark);
-}
-
-.mobile-nav__container {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.mobile-nav__social {
-    display: flex;
-    align-items: center;
-}
-
-.mobile-nav__social a {
-    font-size: 16px;
-    color: var(--thm-base);
-    transition: 500ms;
-}
-
-.mobile-nav__social a+a {
-    margin-left: 30px;
-}
-
-.mobile-nav__social a:hover {
-    color: #ffffff;
-}
-
-.mobile-nav__contact {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 32px;
-}
-
-.mobile-nav__contact li {
-    color: var(--thm-text-dark);
-    font-size: 14px;
-    font-weight: 400;
-    position: relative;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.07em;
-}
-
-.mobile-nav__contact li+li {
-    margin-top: 15px;
-}
-
-.mobile-nav__contact li a {
-    color: #ffffff;
-    transition: 500ms;
-}
-
-.mobile-nav__contact li a:hover {
-    color: var(--thm-base);
-}
-
-.mobile-nav__contact li>i {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--thm-base);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 16px;
-    margin-right: 10px;
-    color: #fff;
-}
-
-.mobile-nav__container .main-logo,
-.mobile-nav__container .topbar__buttons,
-.mobile-nav__container .main-menu__language,
-.mobile-nav__container .main-menu__login {
-    display: none;
-}
-
-a.sc-hLBbgP {
-    display: none;
-}
 
 /***
 =============================================
@@ -12094,16 +11865,107 @@ body:has(nav[style*="right: 0"]) .floating-container {
 }
 
 /* Common Mobile Styles */
-@media (max-width: 991px) {
-    .floating-container {
-        display: flex; 
-        bottom: 35px;
-        right: 15px;
-        z-index: 90 !important;
-    }
+/* Hide floating contact elements when the mobile menu is active */
+body.mobile-menu-active .floating-container {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: opacity 0.3s ease;
+}
 
-    .btn-floating {
-        width: 45px;
-        height: 45px;
-    }
+/* Ensure the floating buttons have a lower z-index than the menu */
+.floating-container {
+    z-index: 99 !important;
+}
+
+/* Overlay Background */
+.nav-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 7, 34, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 10000;
+}
+
+/* Contact Card Styles */
+.contact-card-mini {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-item .icon-wrap {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 94, 20, 0.15);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff5e14;
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.contact-item .text-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-item label {
+    font-size: 10px;
+    color: #838691;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 700;
+}
+
+.contact-item span {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* HIDE FLOATING CONTACTS LOGIC */
+body.mobile-menu-active .floating-container {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.floating-container {
+    z-index: 90 !important; /* Ensures it is always behind menu */
+}
+
+.social-nav-item {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-nav-item:hover {
+    background: #ff5e14; /* Your theme orange */
+    color: #ffffff;
+    border-color: #ff5e14;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 94, 20, 0.3);
 }
