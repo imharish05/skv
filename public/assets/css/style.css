@@ -9809,7 +9809,7 @@ Mission Vision One
 .mission-vision-one__inner {
     position: relative;
     display: block;
-    background: rgba(var(--thm-base-rgb), 1.0);
+    background: var(--thm-base);
     padding: 60px 60px 60px;
     margin-right: 150px;
     margin-left: -150px;
@@ -9831,7 +9831,7 @@ Mission Vision One
     justify-content: center;
     width: 80px;
     height: 80px;
-    background: var(--thm-black);
+    background: black;
     border-radius: 50%;
     margin-bottom: 23px;
 }

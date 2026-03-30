@@ -11,7 +11,8 @@ const ProjectPage = () => {
         <Header/>
             <Breadcrumb 
                 heading="Projects"
-                currentPage="Project" 
+                currentPage="Project"
+                Img = "projects.png"
             />
             <ProjectFour />
             <FooterOne />

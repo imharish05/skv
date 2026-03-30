@@ -42,55 +42,52 @@ export default class WhyChooseFour extends React.Component {
                             <div className="col-xl-6">
                                 <div className="why-choose-two__content">
                                     <div className="sec-title">
-                                        <div className="sec-title__tagline">
-                                            <h6>Why Choose Us </h6> <span className="right"></span>
-                                        </div>
-                                        <h2 className="sec-title__title">Superior And Popular <br />Services Provide </h2>
-                                        <p className="sec-title__text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                                            odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                                            nesciunt. </p>
-                                    </div>
+    <div className="sec-title__tagline">
+        <h6>Why Choose Us</h6> <span className="right"></span>
+    </div>
+    <h2 className="sec-title__title">RDSO Approved & Trusted <br /> Steel Fabrication Firm</h2>
+    <p className="sec-title__text">SKV Industriees delivers high-quality heavy steel fabrication 
+    with ISO 9001:2015 certified processes, serving Indian Railways, 
+    NHAI, HAL and ISRO across India.</p>
+</div>
 
-                                    <div className="why-choose-two__content-progress">
-                                        {/* Start Why Choose Two Content Progress Single */}
-                                        <div className="why-choose-two__content-progress-single">
-                                            <div className="top">
-                                                <h3>Project Planning - </h3>
-                                                <div className="count-text">85%</div>
-                                            </div>
-                                            <div className="bar">
-                                                <div className="bar-inner count-bar" data-percent="85%">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* End Why Choose Two Content Progress Single */}
+{/* Progress Bars */}
+<div className="why-choose-two__content-progress">
 
-                                        {/* Start Why Choose Two Content Progress Single */}
-                                        <div className="why-choose-two__content-progress-single">
-                                            <div className="top">
-                                                <h3>Project Planning - </h3>
-                                                <div className="count-text">75%</div>
-                                            </div>
-                                            <div className="bar">
-                                                <div className="bar-inner count-bar" data-percent="75%">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* End Why Choose Two Content Progress Single */}
+    {/* Bar 1 */}
+    <div className="why-choose-two__content-progress-single">
+        <div className="top">
+            <h3>On Time Delivery</h3>
+            <div className="count-text">95%</div>
+        </div>
+        <div className="bar">
+            <div className="bar-inner count-bar" data-percent="95%"></div>
+        </div>
+    </div>
 
-                                        {/* Start Why Choose Two Content Progress Single */}
-                                        <div className="why-choose-two__content-progress-single mar0">
-                                            <div className="top">
-                                                <h3>Project Planning - </h3>
-                                                <div className="count-text">65%</div>
-                                            </div>
-                                            <div className="bar">
-                                                <div className="bar-inner count-bar" data-percent="65%">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* End Why Choose Two Content Progress Single */}
-                                    </div>
+    {/* Bar 2 */}
+    <div className="why-choose-two__content-progress-single">
+        <div className="top">
+            <h3>Quality Compliance</h3>
+            <div className="count-text">98%</div>
+        </div>
+        <div className="bar">
+            <div className="bar-inner count-bar" data-percent="98%"></div>
+        </div>
+    </div>
+
+    {/* Bar 3 */}
+    <div className="why-choose-two__content-progress-single mar0">
+        <div className="top">
+            <h3>Customer Satisfaction</h3>
+            <div className="count-text">95%</div>
+        </div>
+        <div className="bar">
+            <div className="bar-inner count-bar" data-percent="95%"></div>
+        </div>
+    </div>
+
+</div>
                                 </div>
                             </div>
                             {/* End Why Choose Two Content */}

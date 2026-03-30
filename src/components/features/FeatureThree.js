@@ -30,11 +30,10 @@ export default class FeatureThree extends React.Component {
                                     <div className="col-xl-6 col-lg-6 col-md-6">
                                         <div className="mission-vision-one__single">
                                             <div className="icon-box">
-                                                <span className="icon-crane"></span>
+                                                <span className="icon-crane" style={{color : "black"}}></span>
                                             </div>
-                                            <h2>Our Mission</h2>
-                                            <p>Incididunt ut labore et dolore magna aliqua dnim veniam, quis nos trud exer dolor
-                                                ullamco laboris nis aliquip.</p>
+                                            <h2 className='text-dark'>Our Mission</h2>
+                                            <p>To manufacture and supply high-quality steel fabrication products meeting RDSO and ISO standards with zero-defect delivery.</p>
                                         </div>
                                     </div>
 
@@ -43,9 +42,8 @@ export default class FeatureThree extends React.Component {
                                             <div className="icon-box">
                                                 <span className="icon-painting"></span>
                                             </div>
-                                            <h2>Our Vision</h2>
-                                            <p>Incididunt ut labore et dolore magna aliqua dnim veniam, quis nos trud exer dolor
-                                                ullamco laboris nis aliquip.</p>
+                                            <h2 className='text-dark'>Our Vision</h2>
+                                            <p>To be the most trusted steel fabrication company in India, delivering world-class bridges and structures that drive national infrastructure growth.</p>
                                         </div>
                                     </div>
                                 </div>
