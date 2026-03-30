@@ -24,9 +24,9 @@ export default class BrandOne extends React.Component {
                 <div className="sec-title text-center">
                             <div className="sec-title__tagline">
                                 <span className="left"></span>
-                                <h6>Ceritificates</h6> <span className="right"></span>
+                                <h6>OUR CERTIFICATIONS</h6> <span className="right"></span>
                             </div>
-                            <h2 className="sec-title__title">Our latest completed and <br /> running projects.</h2>
+                      <h2 className="sec-title__title">Our Trusted Certifications <br /> & Approvals.</h2>
                         </div>
                 <div className="brand-one__bg" style={{ backgroundImage: `url(${publicUrl}assets/images/backgrounds/brand-v1-bg.png)` }}></div>
                 <div className="container">
