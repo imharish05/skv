@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import { IoMdCall } from "react-icons/io";
 import { IoIosMail } from "react-icons/io";
+import { IoLocationSharp } from "react-icons/io5"
 
 export default class FooterOne extends React.Component {
     render(){
@@ -37,24 +38,12 @@ export default class FooterOne extends React.Component {
 
                                                             <li>
                                                                 <a href="https://twitter.com">
-                                                                    <span className="first icon-twitter"></span>
-                                                                    <span className="second icon-twitter"></span>
+                                                                    <span className="first fa-brands fa-instagram"></span>
+                                                                    <span className="second fa-brands fa-instagram"></span>
                                                                 </a>
                                                             </li>
 
-                                                            <li>
-                                                                <a href="https://pinterest.com">
-                                                                    <span className="first icon-pinterest"></span>
-                                                                    <span className="second icon-pinterest"></span>
-                                                                </a>
-                                                            </li>
-
-                                                            <li>
-                                                                <a href="https://linkedin.com">
-                                                                    <span className="first icon-linkedin"></span>
-                                                                    <span className="second icon-linkedin"></span>
-                                                                </a>
-                                                            </li>
+                                                            
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -97,6 +86,19 @@ export default class FooterOne extends React.Component {
     <div className="footer-widget__column footer-widget__posts">
         <h2 className="footer-widget__title">Contact Us</h2>
         <div className="footer-contact-container">
+
+            <div className="footer-contact-item d-flex align-items-center"> {/* Changed center to start */}
+    <div className="icon-box">
+        <IoLocationSharp className="footer-contact-icon" />
+    </div>
+    <div className="contact-details">
+        <span className="contact-label">Location</span>
+        <p className='text-white' style={{ margin: 0, lineHeight: '1.5' }}>
+            S.F.No: 1/2B, Nachipatti, Vennandur, Rasipuram (Tk), Namakkal, Tamil Nadu - 637505.
+        </p>
+    </div>
+</div>
+            
             {/* Call Item */}
             <div className="footer-contact-item d-flex align-items-center">
                 <div className="icon-box">

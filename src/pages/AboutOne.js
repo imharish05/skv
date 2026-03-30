@@ -6,6 +6,7 @@ import ProjectOne from '../components/project/ProjectOne';
 import BrandOne from '../components/brand/BrandOne';
 import FooterOne from '../common/footer/FooterOne';
 import Header from '../common/header/Header';
+import FeatureThree from "../components/features/FeatureThree"
 
 const AboutOne = () => {
     return (
@@ -17,7 +18,7 @@ const AboutOne = () => {
             />
             <WorkPerformanceOne />
             <FeatureFive />
-            <ProjectOne />
+            <FeatureThree/>
             <BrandOne />
             <FooterOne />
         </>

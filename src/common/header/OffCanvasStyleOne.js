@@ -36,25 +36,6 @@ function OffCanvasStyleOne() {
                                                 </p>
                                             </div>
                                         </div>
-
-                                        <div className="form-inner">
-                                            <h4>Get a free quote</h4>
-                                            <form action="index.html" method="post">
-                                                <div className="form-group">
-                                                    <input type="text" name="name" placeholder="Name" required="" />
-                                                </div>
-                                                <div className="form-group">
-                                                    <input type="email" name="email" placeholder="Email" required="" />
-                                                </div>
-                                                <div className="form-group">
-                                                    <textarea name="message" placeholder="Message..."></textarea>
-                                                </div>
-                                                <div className="form-group message-btn">
-                                                    <button className="thm-btn" data-text="Submit Now +" type="submit" data-loading-text="Please wait...">Submit Now</button>
-                                                </div>
-                                            </form>
-                                        </div>
-
                                         <div className="sidebar-contact-info">
                                             <h4>Contact Info</h4>
                                             <ul>
@@ -76,14 +57,8 @@ function OffCanvasStyleOne() {
                                                 <li className="facebook">
                                                     <a href="https://facebook.com"><i className="icon-facebook-app-symbol" aria-hidden="true"></i></a>
                                                 </li>
-                                                <li className="twitter">
-                                                    <a href="https://twitter.com"><i className="icon-twitter" aria-hidden="true"></i></a>
-                                                </li>
-                                                <li className="linkedin">
-                                                    <a href="https://linkedin.com"><i className="icon-linkedin" aria-hidden="true"></i></a>
-                                                </li>
-                                                <li className="gplus">
-                                                    <a href="https://google.com"><i className="icon-google-plus-logo" aria-hidden="true"></i></a>
+                                                <li className="instagram">
+                                                    <a href="https://twitter.com"><i className="fa-brands fa-instagram" aria-hidden="true"></i></a>
                                                 </li>
                                             </ul>
                                         </div>

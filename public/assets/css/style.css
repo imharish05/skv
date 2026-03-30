@@ -21,7 +21,7 @@
 :root {
     --thm-font: 'Open Sans', sans-serif;
     --thm-font-2: 'Roboto', sans-serif;
-    --thm-base: #2a2bf0;
+    --thm-base: rgb(42, 43, 240);
     --thm-base-rgb: 255, 94, 20;
     --thm-black: rgb(255, 255, 255);
     --thm-black-rgb: 0, 22, 89;
@@ -4311,8 +4311,10 @@ button {
 
 /* Icon Box Styling */
 footer .icon-box {
-    width: 50px;
-    height: 50px;
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px;
+    min-height: 50px;
     border-radius: 50% !important;
     background: #075eff; /* Brand Primary Color */
     display: flex;
@@ -8254,7 +8256,7 @@ footer .icon-box {
 .contact-page-google-map {
     position: relative;
     display: block;
-    padding: 120px 0px 108px;
+    padding-bottom: 50px ;
     z-index: 1;
 }
 
@@ -8276,7 +8278,7 @@ footer .icon-box {
     position: relative;
     display: block;
     background: #ffffff;
-    padding: 0px 0px 120px;
+    padding: 0px 0px 100px;
 }
 
 .contact-page__content {
@@ -9013,10 +9015,6 @@ footer .icon-box {
     z-index: -1;
 }
 
-.services-three__single.active .services-three__single__bg {
-    transform: scaleX(1.0) rotateX(0deg);
-    opacity: 1;
-}
 
 .services-three__single:hover .services-three__single__bg {
     transform: scaleX(1.0) rotateX(0deg);
@@ -9030,7 +9028,7 @@ footer .icon-box {
     left: 0;
     bottom: 0;
     right: 0;
-    background: rgba(var(--thm-base-rgb), 0.95);
+    background: rgba(0,0,0,0.9);
     border-radius: 10px;
     content: "";
     z-index: -2;
@@ -9048,6 +9046,7 @@ footer .icon-box {
 .services-three__single:hover .services-three__single-icon {
     transform: rotateY(180deg);
     transition-delay: 0.3s;
+    color: var(--thm-base);
 }
 
 .services-three__single-icon span::before {
@@ -9062,7 +9061,7 @@ footer .icon-box {
 
 .services-three__single:hover .services-three__single-icon span::before,
 .services-three__single.active .services-three__single-icon span::before {
-    color: #000000;
+    color: white;
 }
 
 .services-three__single h3 {
@@ -9071,16 +9070,17 @@ footer .icon-box {
     font-weight: 600;
     text-transform: capitalize;
     margin-bottom: 12px;
+    color: white;
 }
 
 .services-three__single h3 a {
-    color: #000000;
+    color: var(--thm-base);
     transition: all 200ms linear;
     transition-delay: 0.1s;
 }
 
 .services-three__single h3 a:hover {
-    color: var(--thm-black);
+    color: white;
 }
 
 .services-three__single p {
@@ -9800,8 +9800,8 @@ Mission Vision One
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgb(0, 35, 90);
-    background: linear-gradient(90deg, rgba(0, 35, 90, 1) 0%, rgba(0, 35, 90, 1) 32%, rgba(0, 35, 90, 0) 89%);
+    background: rgb(37, 121, 255);
+    background: linear-gradient(90deg, rgb(65, 138, 255) 0%, rgba(0, 35, 90, 1) 32%, rgba(0, 35, 90, 0) 89%);
     content: "";
     z-index: 2;
 }

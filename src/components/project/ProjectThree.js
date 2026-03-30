@@ -84,14 +84,14 @@ export default class ProjectThree extends React.Component {
                                     {/* Start Project Three Single */}
                                     <div className="project-three__single">
                                         <div className="project-three__single-img">
-                                            <img src={publicUrl+"assets/images/update1.0/project-v3-img1.jpg"} alt="#" />
+                                            <img src={publicUrl+"assets/images/update1.0/project-v3-img1.png"} alt="#" />
                                             <div className="icon-box">
-                                                <a className="img-popup" href={publicUrl+"assets/images/update1.0/project-v3-img1.jpg"}><span
+                                                <a className="img-popup" href={publicUrl+"assets/images/update1.0/project-v3-img1.png"}><span
                                                         className="icon-plus-sign"></span></a>
                                             </div>
                                             <div className="content-box">
-                                                <p>construction</p>
-                                                <h3><Link to={process.env.PUBLIC_URL + `/portfolio-details`}>dowson construction</Link></h3>
+                                                <p>Crane Girders</p>
+                                                <h3><Link to={process.env.PUBLIC_URL + `/portfolio-details`}>View All Projects</Link></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -100,14 +100,14 @@ export default class ProjectThree extends React.Component {
                                     {/* Start Project Three Single */}
                                     <div className="project-three__single">
                                         <div className="project-three__single-img">
-                                            <img src={publicUrl+"assets/images/update1.0/project-v3-img2.jpg"} alt="#" />
+                                            <img src={publicUrl+"assets/images/update1.0/project-v3-img2.png"} alt="#" />
                                             <div className="icon-box">
-                                                <a className="img-popup" href={publicUrl+"assets/images/update1.0/project-v3-img2.jpg"}><span
+                                                <a className="img-popup" href={publicUrl+"assets/images/update1.0/project-v3-img2.png"}><span
                                                         className="icon-plus-sign"></span></a>
                                             </div>
                                             <div className="content-box">
-                                                <p>construction</p>
-                                                <h3><Link to={process.env.PUBLIC_URL + `/portfolio-details`}>dowson construction</Link></h3>
+                                                <p>Foot Over Bridges</p>
+                                                <h3><Link to={process.env.PUBLIC_URL + `/portfolio-details`}>View All Projects</Link></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -116,14 +116,14 @@ export default class ProjectThree extends React.Component {
                                     {/* Start Project Three Single */}
                                     <div className="project-three__single">
                                         <div className="project-three__single-img">
-                                            <img src={publicUrl+"assets/images/update1.0/project-v3-img3.jpg"} alt="#" />
+                                            <img src={publicUrl+"assets/images/update1.0/project-v3-img3.png"} alt="#" />
                                             <div className="icon-box">
-                                                <a className="img-popup" href={publicUrl+"assets/images/update1.0/project-v3-img3.jpg"}><span
+                                                <a className="img-popup" href={publicUrl+"assets/images/update1.0/project-v3-img3.png"}><span
                                                         className="icon-plus-sign"></span></a>
                                             </div>
                                             <div className="content-box">
-                                                <p>construction</p>
-                                                <h3><Link to={process.env.PUBLIC_URL + `/portfolio-details`}>dowson construction</Link></h3>
+                                                <p>PEB Sheds & Warehouses</p>
+                                                <h3><Link to={process.env.PUBLIC_URL + `/portfolio-details`}>View All Projects</Link></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -132,15 +132,15 @@ export default class ProjectThree extends React.Component {
                                     {/* Start Project Three Single */}
                                     <div className="project-three__single">
                                         <div className="project-three__single-img">
-                                            <img src={publicUrl+"assets/images/update1.0/project-v3-img4.jpg"} alt="#" />
+                                            <img src={publicUrl+"assets/images/update1.0/project-v3-img4.png"} alt="#" />
                                             <div className="icon-box">
-                                                <a className="img-popup" href={publicUrl+"assets/images/update1.0/project-v3-img4.jpg"}>
+                                                <a className="img-popup" href={publicUrl+"assets/images/update1.0/project-v3-img4.png"}>
                                                     <span className="icon-plus-sign"></span>
                                                 </a>
                                             </div>
                                             <div className="content-box">
-                                                <p>construction</p>
-                                                <h3><Link to={process.env.PUBLIC_URL + `/portfolio-details`}>dowson construction</Link></h3>
+                                                <p>Bowstring Girders</p>
+                                                <h3><Link to={process.env.PUBLIC_URL + `/portfolio-details`}>View All Projects</Link></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -150,9 +150,10 @@ export default class ProjectThree extends React.Component {
 
                             <div className="col-xl-12">
                                 <div className="project-three-more-project-btn text-center">
-                                    <div className="btn-box">
-                                        <Link href="/portfolio" className="thm-btn" data-text="View All Portfolio +">View All project +</Link>
-                                    </div>
+                                    <div className="service-btn d-flex align-items-center justify-content-center">
+                                                                            <Link className='btn border p-3 text-white w-auto' id='service-btn' style={{transition : 'all 0.3s ease'}}
+                                                                            to= {publicUrl + "projects"}>All Projects</Link>
+                                                                </div>
                                 </div>
                             </div>
 

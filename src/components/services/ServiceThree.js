@@ -17,13 +17,9 @@ export default class ServiceThree extends React.Component {
                                         <div className="sec-title__tagline">
                                             <h6>COMPANY SERVICES</h6> <span className="right"></span>
                                         </div>
-                                    <div className='d-flex justify-content-between align-items-center border w-100'>
+                                    <div className='d-flex justify-content-between align-items-center w-100'>
                                         <h2 className="sec-title__title">Our Company Best <br /> Services</h2>
                                         </div>
-                                    </div>
-                                    <div className="service-btn" id='service-btn'>
-                                        <Link className='btn border p-3 text-white' style={{transition : 'all 0.3s ease'}}
-                                        to= {publicUrl + "services"}>All Services</Link>
                                     </div>
                                 </div>
                             </div>
@@ -32,7 +28,7 @@ export default class ServiceThree extends React.Component {
                         <div className="row">
                             {/* Start Services One Single */}
                             <div className="col-xl-3 col-lg-6 col-md-6">
-                                <div className="services-three__single active">
+                                <div className="services-three__single">
                                     <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/services/services-v1-bg.jpg)'}}></div>
                                     <div className="services-three__single-icon">
                                         <span className="icon-construction"></span>
@@ -93,7 +89,12 @@ export default class ServiceThree extends React.Component {
                                 </div>
                             </div>
                             {/* End Services One Single */}
+
                         </div>
+                            <div className="service-btn d-flex align-items-center justify-content-center">
+                                        <Link className='btn border p-3 text-white w-auto' id='service-btn' style={{transition : 'all 0.3s ease'}}
+                                        to= {publicUrl + "services"}>All Services</Link>
+                            </div>
                     </div>
                 </section>
             </>
