@@ -72,6 +72,59 @@ export default class FeatureFive extends React.Component {
           
     }
     render(){
+
+const companyHistory = [
+    {
+        year: "2010",
+        title: "Foundation",
+        text: "SKV Industriees was established at Vennandur, Namakkal, Tamil Nadu, starting its journey in heavy steel fabrication and structural work here."
+    },
+    {
+        year: "2012",
+        title: "First Railway Project",
+        text: "Secured and completed first Southern Railway steel girder project, marking the start of a strong and lasting bond with Indian Railways work."
+    },
+    {
+        year: "2014",
+        title: "RDSO Approval",
+        text: "Obtained RDSO approval from Ministry of Railways, India, for fabrication of Open Web, Composite and Other Steel Plate Girders successfully."
+    },
+    {
+        year: "2016",
+        title: "HAL & ISRO Projects",
+        text: "Delivered 650 MT helicopter plant for HAL at Bidrehalla Kaval and crane girder for ISRO VSSC Thumba Kerala with full quality compliance here."
+    },
+    {
+        year: "2018",
+        title: "ISO Certification",
+        text: "Achieved ISO 9001:2015 certification from Otabu Certification Pvt Ltd for manufacturing and supply of heavy steel fabrication products work."
+    },
+    {
+        year: "2019",
+        title: "NHAI Projects",
+        text: "Executed NHAI bridge projects at Ananthapur totalling 1420 MT and Mudigubba 550 MT, expanding our strong presence beyond the railway sector."
+    },
+    {
+        year: "2020",
+        title: "PEB Expansion",
+        text: "Expanded into Pre-Engineered Buildings, delivering warehouses for Tamil Nadu Government Civil Supplies Department successfully across locations."
+    },
+    {
+        year: "2021",
+        title: "Bowstring Girders",
+        text: "Commenced bowstring girder work for Southern and South Western Railways, completing landmark arch bridge structures across Tamil Nadu, India."
+    },
+    {
+        year: "2022",
+        title: "Major Milestones",
+        text: "Completed ROB projects at Perungalathur and Paranur for Southern Railway, each weighing 830 MT with a massive 53 metre span at both sites."
+    },
+    {
+        year: "2024",
+        title: "80+ Projects",
+        text: "Crossed 80 completed projects with active bowstring girder work at Jolarpetti and Nayandahalli for South Western Railway totalling 550 MT."
+    },
+];
         let publicUrl = process.env.PUBLIC_URL+'/'
         return (
             <>
@@ -83,13 +136,13 @@ export default class FeatureFive extends React.Component {
                             <div className="col-xl-12">
                                 <div className="feature-three__title">
                                     <div className="sec-title">
-                                        <div className="sec-title__tagline">
-                                            <h6>More About Us</h6> <span className="right"></span>
-                                        </div>
-                                        <h2 className="sec-title__title">We Construction Design <br />Consistency </h2>
-                                        <p className="sec-title__text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                            dolore eu fugiat nulla pariatur. </p>
-                                    </div>
+    <div className="sec-title__tagline">
+        <h6>More About Us</h6> <span className="right"></span>
+    </div>
+    <h2 className="sec-title__title">Our Journey Of <br /> Excellence & Growth</h2>
+    <p className="sec-title__text">From a single fabrication unit in Namakkal to an RDSO approved, 
+    ISO certified firm delivering steel structures across India.</p>
+</div>
                                 </div>
                             </div>
                         </div>
@@ -98,20 +151,7 @@ export default class FeatureFive extends React.Component {
                             <div className="col-xl-12">
                                 <div className="feature-three__tab tabs-box">
                                     <div className="feature-three__tab-button">
-                                        <ul className="tab-buttons clearfix">
-                                            <li data-tab="#history" className="tab-btn active-btn">
                                                 <h3>Our History</h3>
-                                            </li>
-                                            <li data-tab="#growth " className="tab-btn">
-                                                <h3>Our Growth</h3>
-                                            </li>
-                                            <li data-tab="#mission" className="tab-btn">
-                                                <h3>Our Mission</h3>
-                                            </li>
-                                            <li data-tab="#vision" className="tab-btn">
-                                                <h3>Our Vision</h3>
-                                            </li>
-                                        </ul>
                                     </div>
 
 
@@ -120,245 +160,22 @@ export default class FeatureFive extends React.Component {
                                         <div className="tab active-tab" id="history">
                                             <div className="feature-three__tab-content-item">
                                                 <div className="feature-three__history-carousel owl-carousel owl-theme">
-                                                    {/* Start Feature Three History Single */}
+
+                                                    {
+                                                        companyHistory.map((item,index) => (
+                                                            
                                                     <div className="feature-three__history-single">
+                                                        <h5 className='pb-3'>{item.title}</h5>
                                                         <div className="history-text">
                                                             <h2>history</h2>
                                                         </div>
                                                         <div className="date-box">
-                                                            <h2>1970</h2>
+                                                            <h2>{item.year}</h2>
                                                         </div>
-                                                        <p>It is a long established fact that a reader
-                                                            will be distracted by the readable content of a page when looking at
-                                                            its layout. The point of using Lorem Ipsum is that it has a
-                                                            more-or-less normal distribution.</p>
+                                                        <p>{item.text}</p>
                                                     </div>
-                                                    {/* End Feature Three History Single */}
-
-                                                    {/* Start Feature Three History Single */}
-                                                    <div className="feature-three__history-single">
-                                                        <div className="history-text">
-                                                            <h2>history</h2>
-                                                        </div>
-                                                        <div className="date-box">
-                                                            <h2>1975-1980</h2>
-                                                        </div>
-                                                        <p>It is a long established fact that a reader
-                                                            will be distracted by the readable content of a page when looking at
-                                                            its layout. The point of using Lorem Ipsum is that it has a
-                                                            more-or-less normal distribution.</p>
-                                                    </div>
-                                                    {/* End Feature Three History Single */}
-
-                                                    {/* Start Feature Three History Single */}
-                                                    <div className="feature-three__history-single">
-                                                        <div className="history-text">
-                                                            <h2>history</h2>
-                                                        </div>
-                                                        <div className="date-box">
-                                                            <h2>1981-1985</h2>
-                                                        </div>
-                                                        <p>It is a long established fact that a reader
-                                                            will bedistracted by the readable content of a page when looking at
-                                                            its layout. The point of using Lorem Ipsum is that it has a
-                                                            more-or-less normal distribution.</p>
-                                                    </div>
-                                                    {/* End Feature Three History Single */}
-
-                                                    {/* Start Feature Three History Single */}
-                                                    <div className="feature-three__history-single">
-                                                        <div className="history-text">
-                                                            <h2>history</h2>
-                                                        </div>
-                                                        <div className="date-box">
-                                                            <h2>1986-1990</h2>
-                                                        </div>
-                                                        <p>It is a long established fact that a reader
-                                                            will bedistracted by the readable content of a page when looking at
-                                                            its layout. The point of using Lorem Ipsum is that it has a
-                                                            more-or-less normal distribution.</p>
-                                                    </div>
-                                                    {/* End Feature Three History Single */}
-
-                                                    {/* Start Feature Three History Single */}
-                                                    <div className="feature-three__history-single">
-                                                        <div className="history-text">
-                                                            <h2>history</h2>
-                                                        </div>
-                                                        <div className="date-box">
-                                                            <h2>1991-1995</h2>
-                                                        </div>
-                                                        <p>It is a long established fact that a reader
-                                                            will bedistracted by the readable content of a page when looking at
-                                                            its layout. The point of using Lorem Ipsum is that it has a
-                                                            more-or-less normal distribution.</p>
-                                                    </div>
-                                                    {/* End Feature Three History Single */}
-
-                                                    {/* Start Feature Three History Single */}
-                                                    <div className="feature-three__history-single">
-                                                        <div className="history-text">
-                                                            <h2>history</h2>
-                                                        </div>
-                                                        <div className="date-box">
-                                                            <h2>1996-2000</h2>
-                                                        </div>
-                                                        <p>It is a long established fact that a reader
-                                                            will bedistracted by the readable content of a page when looking at
-                                                            its layout. The point of using Lorem Ipsum is that it has a
-                                                            more-or-less normal distribution.</p>
-                                                    </div>
-                                                    {/* End Feature Three History Single */}
-
-                                                    {/* Start Feature Three History Single */}
-                                                    <div className="feature-three__history-single">
-                                                        <div className="history-text">
-                                                            <h2>history</h2>
-                                                        </div>
-                                                        <div className="date-box">
-                                                            <h2>2001-2005</h2>
-                                                        </div>
-                                                        <p>It is a long established fact that a reader
-                                                            will bedistracted by the readable content of a page when looking at
-                                                            its layout. The point of using Lorem Ipsum is that it has a
-                                                            more-or-less normal distribution.</p>
-                                                    </div>
-                                                    {/* End Feature Three History Single */}
-
-                                                    {/* Start Feature Three History Single */}
-                                                    <div className="feature-three__history-single">
-                                                        <div className="history-text">
-                                                            <h2>history</h2>
-                                                        </div>
-                                                        <div className="date-box">
-                                                            <h2>2006-2010</h2>
-                                                        </div>
-                                                        <p>It is a long established fact that a reader
-                                                            will bedistracted by the readable content of a page when looking at
-                                                            its layout. The point of using Lorem Ipsum is that it has a
-                                                            more-or-less normal distribution.</p>
-                                                    </div>
-                                                    {/* End Feature Three History Single */}
-
-                                                    {/* Start Feature Three History Single */}
-                                                    <div className="feature-three__history-single">
-                                                        <div className="history-text">
-                                                            <h2>history</h2>
-                                                        </div>
-                                                        <div className="date-box">
-                                                            <h2>2011-2015</h2>
-                                                        </div>
-                                                        <p>It is a long established fact that a reader
-                                                            will bedistracted by the readable content of a page when looking at
-                                                            its layout. The point of using Lorem Ipsum is that it has a
-                                                            more-or-less normal distribution.</p>
-                                                    </div>
-                                                    {/* End Feature Three History Single */}
-
-                                                    {/* Start Feature Three History Single */}
-                                                    <div className="feature-three__history-single">
-                                                        <div className="history-text">
-                                                            <h2>history</h2>
-                                                        </div>
-                                                        <div className="date-box">
-                                                            <h2>2016-2020</h2>
-                                                        </div>
-                                                        <p>It is a long established fact that a reader
-                                                            will bedistracted by the readable content of a page when looking at
-                                                            its layout. The point of using Lorem Ipsum is that it has a
-                                                            more-or-less normal distribution.</p>
-                                                    </div>
-                                                    {/* End Feature Three History Single */}
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* End Tab */}
-
-                                        {/* Start Tab */}
-                                        <div className="tab" id="growth">
-                                            <div className="feature-three__tab-content-item">
-                                                <div className="tab-content-inner">
-                                                    <div className="row">
-                                                        <div className="col-xl-5 col-lg-6">
-                                                            <div className="tab-content-inner-text">
-                                                                <h2>Our Growth</h2>
-                                                                <p>There are many variations of passages of Lorem Ipsum
-                                                                    available, but the majority have suffered alteration in some
-                                                                    form, by injected humour, or randomised words which don't
-                                                                    look even slightly believable. If you are going to use a
-                                                                    passage of Lorem Ipsum, you need to be sure there isn't
-                                                                    anything embarrassing hidden in the middle of text. All the
-                                                                    Lorem Ipsum generators on the Internet tend to repeat
-                                                                    predefined chunks.</p>
-                                                            </div>
-                                                        </div>
-                                                        <div className="col-xl-7 col-lg-6">
-                                                            <div className="tab-content-inner-img">
-                                                                <img src={publicUrl+"assets/images/resources/feature-v3-img1.jpg"} alt="" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* End Tab */}
-
-                                        {/* Start Tab */}
-                                        <div className="tab" id="mission">
-                                            <div className="feature-three__tab-content-item">
-                                                <div className="tab-content-inner">
-                                                    <div className="row">
-                                                        <div className="col-xl-5 col-lg-6">
-                                                            <div className="tab-content-inner-text">
-                                                                <h2>Our Mission</h2>
-                                                                <p>There are many variations of passages of Lorem Ipsum
-                                                                    available, but the majority have suffered alteration in some
-                                                                    form, by injected humour, or randomised words which don't
-                                                                    look even slightly believable. If you are going to use a
-                                                                    passage of Lorem Ipsum, you need to be sure there isn't
-                                                                    anything.</p>
-                                                                <div className="btn-box">
-                                                                    <Link to={process.env.PUBLIC_URL + `/`} className="thm-btn" data-text="Get Started +">Get Started +</Link>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="col-xl-7 col-lg-6">
-                                                            <div className="tab-content-inner-img">
-                                                                <img src={publicUrl+"assets/images/resources/feature-v3-img2.jpg"} alt="" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {/* End Tab */}
-
-                                        {/* Start Tab */}
-                                        <div className="tab" id="vision">
-                                            <div className="feature-three__tab-content-item">
-                                                <div className="tab-content-inner">
-                                                    <div className="row">
-                                                        <div className="col-xl-5 col-lg-6">
-                                                            <div className="tab-content-inner-text">
-                                                                <h2>Our Vision</h2>
-                                                                <p>There are many variations of passages of Lorem Ipsum
-                                                                    available, but the majority have suffered alteration in some
-                                                                    form, by injected humour, or randomised words which don't
-                                                                    look even slightly believable. If you are going to use a
-                                                                    passage of Lorem Ipsum, you need to be sure there isn't
-                                                                    anything.</p>
-                                                                <div className="btn-box">
-                                                                    <Link to={process.env.PUBLIC_URL + `/`} className="thm-btn" data-text="Get Started +">Get Started +</Link>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="col-xl-7 col-lg-6">
-                                                            <div className="tab-content-inner-img">
-                                                                <img src={publicUrl+"assets/images/resources/feature-v3-img3.jpg"} alt="" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                        ))
+                                                    }
                                                 </div>
                                             </div>
                                         </div>

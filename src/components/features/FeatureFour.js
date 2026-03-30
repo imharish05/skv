@@ -21,7 +21,7 @@ export default class FeatureFour extends React.Component {
                             <div className="col-xl-4">
                                 <div className="feature-four__single">
                                     <div className="feature-four__single-img">
-                                        <img src={publicUrl+"assets/images/update1.0/feature-v3-img1.jpg"} alt="#" />
+                                        <img src={publicUrl+"assets/images/update1.0/feature-v3-img1.png"} alt="#" />
                                     </div>
                                 </div>
                             </div>
@@ -31,13 +31,12 @@ export default class FeatureFour extends React.Component {
                             <div className="col-xl-4">
                                 <div className="feature-four__single style2 text-center">
                                     <div className="feature-four__single-icon">
-                                        <span className="icon-interior-design-1"></span>
+                                        <span className="icon-cv"></span>
                                     </div>
                                     <div className="feature-four__single-content">
-                                        <span>EXPLORE THE FEATURES</span>
-                                        <h2><Link to={process.env.PUBLIC_URL + `/services`}>House Planning</Link></h2>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                            laudantium, totam rem aperiam, </p>
+                                        <h5 className='pb-3'>RDSO Approved Firm</h5>
+                                        
+                                        <p>SKV Industriees is approved by the Research Design & Standards Organisation under the Ministry of Railways, Government of India, authorizing them to fabricate Steel Bridge Girders for Indian Railways — a certification held by very few firms in Tamil Nadu.</p>
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +46,7 @@ export default class FeatureFour extends React.Component {
                             <div className="col-xl-4">
                                 <div className="feature-four__single">
                                     <div className="feature-four__single-img">
-                                        <img src={publicUrl+"assets/images/update1.0/feature-v3-img2.jpg"} alt="#" />
+                                        <img src={publicUrl+"assets/images/update1.0/feature-v3-img2.png"} alt="#" />
                                     </div>
                                 </div>
                             </div>
@@ -57,13 +56,16 @@ export default class FeatureFour extends React.Component {
                             <div className="col-xl-4">
                                 <div className="feature-four__single style2 text-center">
                                     <div className="feature-four__single-icon">
-                                        <span className="icon-crane"></span>
+                                        <span className="icon-automation"></span>
                                     </div>
                                     <div className="feature-four__single-content">
-                                        <span>EXPLORE THE FEATURES</span>
-                                        <h2><Link to={process.env.PUBLIC_URL + `/services`}>Coal Excavation</Link></h2>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                            laudantium, totam rem aperiam, </p>
+                                        <h5 className='pb-3'>World-Class Workshop Infrastructure</h5>
+                    
+                                        <p>Equipped with CNC Plasma Cutting Machines, Automatic Beam 
+        Welding Machines, EOT Cranes up to 25MT, Sand Blasting units 
+        and 40+ specialized machines — all operated by a skilled 
+        team of 75 employees within a dedicated fabrication unit 
+        at Namakkal, Tamil Nadu.</p>
                                     </div>
                                 </div>
                             </div>
@@ -73,7 +75,7 @@ export default class FeatureFour extends React.Component {
                             <div className="col-xl-4">
                                 <div className="feature-four__single">
                                     <div className="feature-four__single-img">
-                                        <img src={publicUrl+"assets/images/update1.0/feature-v3-img3.jpg"} alt="#" />
+                                        <img src={publicUrl+"assets/images/update1.0/feature-v3-img3.png"} alt="#" />
                                     </div>
                                 </div>
                             </div>
@@ -83,13 +85,16 @@ export default class FeatureFour extends React.Component {
                             <div className="col-xl-4">
                                 <div className="feature-four__single style2 text-center">
                                     <div className="feature-four__single-icon">
-                                        <span className="icon-painting"></span>
+                                        <span className="icon-line-chart"></span>
                                     </div>
                                     <div className="feature-four__single-content">
-                                        <span>EXPLORE THE FEATURES</span>
-                                        <h2><Link to={process.env.PUBLIC_URL + `/services`}>Interior Design</Link></h2>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                            laudantium, totam rem aperiam, </p>
+    
+                                        <h5 className='pb-3'>Proven Track Record Across India</h5>
+                                        <p>From bowstring girders for Southern Railway to crane girders 
+        for ISRO at VSSC Kerala and helicopter manufacturing plants 
+        for Hindustan Aeronautics Limited — SKV Industriees has 
+        successfully delivered 80+ heavy steel projects across 
+        Tamil Nadu, Andhra Pradesh, Karnataka and Kerala.</p>
                                     </div>
                                 </div>
                             </div>

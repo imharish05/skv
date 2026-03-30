@@ -3448,7 +3448,7 @@ button {
     position: relative;
     display: block;
     background: #ffffff;
-    border: 1px solid rgba(var(--thm-base-rgb), 0.3);
+    border: 1px solid var(--thm-base);
     border-bottom-width: 5px;
     padding: 29px 29px 24px;
     z-index: 1;
@@ -10026,7 +10026,7 @@ Feature Four
     position: relative;
     display: block;
     border: 1px solid rgba(var(--thm-gray-rgb), 0.4);
-    padding: 50px 35px 42px;
+    padding: 30px 21px 30px;
 }
 
 .feature-four__single-icon {
