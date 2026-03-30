@@ -9138,6 +9138,8 @@ footer .icon-box {
 
 
 
+
+
 /***
 =============================================
   About Three
@@ -11946,4 +11948,13 @@ body.mobile-menu-active .floating-container {
 .floating-container {
     z-index: 90 !important; /* Ensures it is always behind menu */
 }
+#service-btn{
+    background-color: var(--thm-base);
+    color: white;
+    border-radius: 10px;
+}
 
+#service-btn:hover{
+    background-color: black;
+    color: var(--thm-base);
+}

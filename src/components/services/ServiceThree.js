@@ -15,13 +15,15 @@ export default class ServiceThree extends React.Component {
                                 <div className="services-three__top">
                                     <div className="sec-title">
                                         <div className="sec-title__tagline">
-                                            <h6>COMPANY SERVICES </h6> <span className="right"></span>
+                                            <h6>COMPANY SERVICES</h6> <span className="right"></span>
                                         </div>
+                                    <div className='d-flex justify-content-between align-items-center border w-100'>
                                         <h2 className="sec-title__title">Our Company Best <br /> Services</h2>
+                                        </div>
                                     </div>
-                                    <div className="text-box">
-                                        <p>There are many variations of passages of Lorem Ipsum available, but <br /> the majority
-                                            have suffered alteration in some form.</p>
+                                    <div className="service-btn" id='service-btn'>
+                                        <Link className='btn border p-3 text-white' style={{transition : 'all 0.3s ease'}}
+                                        to= {publicUrl + "services"}>All Services</Link>
                                     </div>
                                 </div>
                             </div>
@@ -33,10 +35,10 @@ export default class ServiceThree extends React.Component {
                                 <div className="services-three__single active">
                                     <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/services/services-v1-bg.jpg)'}}></div>
                                     <div className="services-three__single-icon">
-                                        <span className="icon-crane"></span>
+                                        <span className="icon-construction"></span>
                                     </div>
-                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>Coal Excavation</Link></h3>
-                                    <p>Lorem ipsum is simply free text dolor amett consec adipisc.</p>
+                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>Bowstring Girders</Link></h3>
+                                    <p>Fabrication of RDSO approved bowstring girders for railway bridges up to 42 metres span.</p>
                                     <div className="btn-box">
                                         <Link to={process.env.PUBLIC_URL + `/general-contracting`}><span className="icon-right-arrow"></span></Link>
                                     </div>
@@ -49,10 +51,10 @@ export default class ServiceThree extends React.Component {
                                 <div className="services-three__single">
                                     <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/services/services-v1-bg.jpg)'}}></div>
                                     <div className="services-three__single-icon">
-                                        <span className="icon-interior-design-1"></span>
+                                        <span className="icon-industrial-zone"></span>
                                     </div>
-                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>House Planning</Link></h3>
-                                    <p>Lorem ipsum is simply free text dolor amett consec adipisc.</p>
+                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>Metalizing</Link></h3>
+                                    <p>Professional zinc metalizing and chromate painting for long-lasting corrosion protection on steel structures.</p>
                                     <div className="btn-box">
                                         <Link to={process.env.PUBLIC_URL + `/general-contracting`}><span className="icon-right-arrow"></span></Link>
                                     </div>
@@ -65,10 +67,10 @@ export default class ServiceThree extends React.Component {
                                 <div className="services-three__single">
                                     <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/services/services-v1-bg.jpg)'}}></div>
                                     <div className="services-three__single-icon">
-                                        <span className="icon-surgery"></span>
+                                        <span className="icon-wrench"></span>
                                     </div>
-                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>Mine Factory</Link></h3>
-                                    <p>Lorem ipsum is simply free text dolor amett consec adipisc.</p>
+                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>CNC Cutting</Link></h3>
+                                    <p>Precision CNC plasma cutting up to 300mm with state-of-the-art machines for accurate steel fabrication.</p>
                                     <div className="btn-box">
                                         <Link to={process.env.PUBLIC_URL + `/general-contracting`}><span className="icon-right-arrow"></span></Link>
                                     </div>
@@ -81,10 +83,10 @@ export default class ServiceThree extends React.Component {
                                 <div className="services-three__single">
                                     <div className="services-three__single__bg" style={{backgroundImage: 'url('+publicUrl+'assets/images/services/services-v1-bg.jpg)'}}></div>
                                     <div className="services-three__single-icon">
-                                        <span className="icon-painting"></span>
+                                        <span className="icon-hammer"></span>
                                     </div>
-                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>icon-painting</Link></h3>
-                                    <p>Lorem ipsum is simply free text dolor amett consec adipisc.</p>
+                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>PEB Roofing</Link></h3>
+                                    <p>Design and construction of pre-engineered steel buildings and warehouse sheds for industrial and commercial use.</p>
                                     <div className="btn-box">
                                         <Link to={process.env.PUBLIC_URL + `/general-contracting`}><span className="icon-right-arrow"></span></Link>
                                     </div>
