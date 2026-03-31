@@ -15,7 +15,7 @@ export default class ServiceThree extends React.Component {
                                 <div className="services-three__top">
                                     <div className="sec-title">
                                         <div className="sec-title__tagline">
-                                            <h6>COMPANY SERVICES</h6> <span className="right"></span>
+                                            <span className="right"></span> <h6>COMPANY SERVICES</h6> <span className="right"></span>
                                         </div>
                                     <div className='d-flex justify-content-between align-items-center w-100'>
                                         <h2 className="sec-title__title">Our Company Best <br /> Services</h2>
@@ -33,10 +33,10 @@ export default class ServiceThree extends React.Component {
                                     <div className="services-three__single-icon">
                                         <span className="icon-construction"></span>
                                     </div>
-                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>Bowstring Girders</Link></h3>
+                                    <h3><Link to={process.env.PUBLIC_URL + `/services`}>Bowstring Girders</Link></h3>
                                     <p>Fabrication of RDSO approved bowstring girders for railway bridges up to 42 metres span.</p>
                                     <div className="btn-box">
-                                        <Link to={process.env.PUBLIC_URL + `/general-contracting`}><span className="icon-right-arrow"></span></Link>
+                                        <Link to={process.env.PUBLIC_URL + `/services`}><span className="icon-right-arrow"></span></Link>
                                     </div>
                                 </div>
                             </div>
@@ -49,10 +49,10 @@ export default class ServiceThree extends React.Component {
                                     <div className="services-three__single-icon">
                                         <span className="icon-industrial-zone"></span>
                                     </div>
-                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>Metalizing</Link></h3>
+                                    <h3><Link to={process.env.PUBLIC_URL + `/services`}>Metalizing</Link></h3>
                                     <p>Professional zinc metalizing and chromate painting for long-lasting corrosion protection on steel structures.</p>
                                     <div className="btn-box">
-                                        <Link to={process.env.PUBLIC_URL + `/general-contracting`}><span className="icon-right-arrow"></span></Link>
+                                        <Link to={process.env.PUBLIC_URL + `/services`}><span className="icon-right-arrow"></span></Link>
                                     </div>
                                 </div>
                             </div>
@@ -65,10 +65,10 @@ export default class ServiceThree extends React.Component {
                                     <div className="services-three__single-icon">
                                         <span className="icon-wrench"></span>
                                     </div>
-                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>CNC Cutting</Link></h3>
+                                    <h3><Link to={process.env.PUBLIC_URL + `/services`}>CNC Cutting</Link></h3>
                                     <p>Precision CNC plasma cutting up to 300mm with state-of-the-art machines for accurate steel fabrication.</p>
                                     <div className="btn-box">
-                                        <Link to={process.env.PUBLIC_URL + `/general-contracting`}><span className="icon-right-arrow"></span></Link>
+                                        <Link to={process.env.PUBLIC_URL + `/services`}><span className="icon-right-arrow"></span></Link>
                                     </div>
                                 </div>
                             </div>
@@ -81,10 +81,10 @@ export default class ServiceThree extends React.Component {
                                     <div className="services-three__single-icon">
                                         <span className="icon-hammer"></span>
                                     </div>
-                                    <h3><Link to={process.env.PUBLIC_URL + `/general-contracting`}>PEB Roofing</Link></h3>
+                                    <h3><Link to={process.env.PUBLIC_URL + `/services`}>PEB Roofing</Link></h3>
                                     <p>Design and construction of pre-engineered steel buildings and warehouse sheds for industrial and commercial use.</p>
                                     <div className="btn-box">
-                                        <Link to={process.env.PUBLIC_URL + `/general-contracting`}><span className="icon-right-arrow"></span></Link>
+                                        <Link to={process.env.PUBLIC_URL + `/services`}><span className="icon-right-arrow"></span></Link>
                                     </div>
                                 </div>
                             </div>

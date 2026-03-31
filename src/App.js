@@ -41,15 +41,7 @@ function App() {
             <Route path={`${process.env.PUBLIC_URL}/`} element={<HomeDefault />} />
             <Route path={`${process.env.PUBLIC_URL}/about`} element={<AboutOne />} />
             <Route path={`${process.env.PUBLIC_URL}/services`} element={<ServicesPage />} />
-            <Route path={`${process.env.PUBLIC_URL}/general-contracting`} element={<GeneralContracting />} />
-            <Route path={`${process.env.PUBLIC_URL}/metrial-managment`} element={<MetrialManagment />} />
-            <Route path={`${process.env.PUBLIC_URL}/building-renovation`} element={<BuildingRenovation />} />
-            <Route path={`${process.env.PUBLIC_URL}/architecture-design`} element={<ArchitectureDesign />} />
-            <Route path={`${process.env.PUBLIC_URL}/multistory-build`} element={<MultistoryBuild />} />
             <Route path={`${process.env.PUBLIC_URL}/projects`} element={<ProjectPage />} />
-            <Route path={`${process.env.PUBLIC_URL}/portfolio-details`} element={<PortfolioDetails />} />
-            <Route path={`${process.env.PUBLIC_URL}/team`} element={<TeamPage />} />
-            <Route path={`${process.env.PUBLIC_URL}/team-details`} element={<TeamDetails />} />
             <Route path={`${process.env.PUBLIC_URL}/testimonials`} element={<TestimonialsPage />} />
             <Route path={`${process.env.PUBLIC_URL}/contact`} element={<ContactPage />} />
             <Route path={`${process.env.PUBLIC_URL}/*`} element={<Error />} />

@@ -164,7 +164,7 @@ const companyHistory = [
                                                     {
                                                         companyHistory.map((item,index) => (
                                                             
-                                                    <div className="feature-three__history-single">
+                                                    <div className="feature-three__history-single" key={index}>
                                                         <h5 className='pb-3'>{item.title}</h5>
                                                         <div className="history-text">
                                                             <h2>history</h2>

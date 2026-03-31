@@ -7,7 +7,7 @@ export default class WorkPerformanceOne extends React.Component {
         if ($('.dial').length) {
             $('.dial').appear(function () {
               var elm = $(this);
-              var color = elm.attr('data-fgColor');
+              
               var perc = elm.attr('value');
               elm.knob({
                 'value': 0,
@@ -55,15 +55,6 @@ export default class WorkPerformanceOne extends React.Component {
 
     render(){
         let publicUrl = process.env.PUBLIC_URL+'/'
-
-        const performance = [
-            {
-                value: 90,
-                label: "Client Satisfaction",
-                text: "Trusted by Southern Railway, NHAI, HAL, ISRO and Tamil Nadu Government for consistent quality and professional project execution."
-            },
-        ];
-
         return (
             <>
                 <section className="work-perfomance-one-sec">
@@ -91,12 +82,13 @@ export default class WorkPerformanceOne extends React.Component {
                 <input
                     type="text"
                     className="dial"
-                    data-fgColor="#ff5e14"
-                    data-bgColor="#ebebeb"
+                    data-fgcolor="#ff5e14"
+                    data-bgcolor="#ebebeb"
                     data-width="100"
                     data-height="100"
                     data-linecap="normal"
                     value="95"
+                    readOnly
                 />
                 <div className="inner-text count-box">
                     <span className="count-text" data-stop="95" data-speed="2000"></span>

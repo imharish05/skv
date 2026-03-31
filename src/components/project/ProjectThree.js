@@ -91,7 +91,7 @@ export default class ProjectThree extends React.Component {
                                             </div>
                                             <div className="content-box">
                                                 <p>Crane Girders</p>
-                                                <h3><Link to={process.env.PUBLIC_URL + `/portfolio-details`}>View All Projects</Link></h3>
+                                                <h3><Link to={process.env.PUBLIC_URL + `/projects`}>View All Projects</Link></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -107,7 +107,7 @@ export default class ProjectThree extends React.Component {
                                             </div>
                                             <div className="content-box">
                                                 <p>Foot Over Bridges</p>
-                                                <h3><Link to={process.env.PUBLIC_URL + `/portfolio-details`}>View All Projects</Link></h3>
+                                                <h3><Link to={process.env.PUBLIC_URL + `/projects`}>View All Projects</Link></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -123,7 +123,7 @@ export default class ProjectThree extends React.Component {
                                             </div>
                                             <div className="content-box">
                                                 <p>PEB Sheds & Warehouses</p>
-                                                <h3><Link to={process.env.PUBLIC_URL + `/portfolio-details`}>View All Projects</Link></h3>
+                                                <h3><Link to={process.env.PUBLIC_URL + `/projects`}>View All Projects</Link></h3>
                                             </div>
                                         </div>
                                     </div>
@@ -140,7 +140,7 @@ export default class ProjectThree extends React.Component {
                                             </div>
                                             <div className="content-box">
                                                 <p>Bowstring Girders</p>
-                                                <h3><Link to={process.env.PUBLIC_URL + `/portfolio-details`}>View All Projects</Link></h3>
+                                                <h3><Link to={process.env.PUBLIC_URL + `/projects`}>View All Projects</Link></h3>
                                             </div>
                                         </div>
                                     </div>

@@ -21,7 +21,7 @@
 :root {
     --thm-font: 'Open Sans', sans-serif;
     --thm-font-2: 'Roboto', sans-serif;
-    --thm-base: rgb(42, 43, 240);
+    --thm-base: #2a2bf0;
     --thm-base-rgb: 255, 94, 20;
     --thm-black: rgb(255, 255, 255);
     --thm-black-rgb: 0, 22, 89;
@@ -442,6 +442,7 @@ button {
 }
 
 .sec-title__title {
+    padding-bottom: 20px !important;
     font-size: 50px;
     line-height: 1.2em;
     font-weight: 700;
@@ -7816,7 +7817,8 @@ footer .icon-box {
 }
 
 .comment-form__input-box input[type="text"],
-.comment-form__input-box input[type="email"] {
+.comment-form__input-box input[type="email"],
+.comment-form__input-box input[type="tel"]{
     position: relative;
     display: block;
     background: #ffffff;
@@ -8989,6 +8991,7 @@ footer .icon-box {
 }
 
 .services-three__single {
+    min-height: 380px !important;
     position: relative;
     display: block;
     border-radius: 10px;
@@ -11957,4 +11960,131 @@ body.mobile-menu-active .floating-container {
 #service-btn:hover{
     background-color: black;
     color: var(--thm-base);
+}
+
+
+/* Media Query */
+
+@media only screen and (min-width: 0px) and (max-width : 767px) {
+
+    /* Nav */
+
+    .main-header-three__middle {
+    padding: 5px 0px 5px;
+}
+    .services-three{
+        padding: 50px 0px 30px !important;
+    }
+    .services-three__top{
+        padding-bottom: 0px;
+    }
+    .project-three {
+    padding: 50px 0px 30px !important;
+}
+.feature-four {
+   padding: 50px 0px 30px !important;
+}
+.testimonials-three {
+   padding: 50px 0px 30px !important;
+}
+
+/* About page */
+.work-perfomance-one-sec{
+    padding: 50px 0px 30px !important;
+}
+
+.feature-three-sec{
+    padding: 50px 0px 30px !important;
+}
+
+    .feature-three__tab{
+        padding : 40px 20px 40px !important;
+    }
+
+    .feature-three__tab-button{
+        padding-bottom: 30px;
+    }
+
+    /* Services */
+    .why-choose-two-sec--services{
+        margin-top: 40px;
+    }
+
+    .why-choose-two-sec {
+        padding: 50px 0px 30px !important;
+    }
+    .feature-two-sec{
+        padding: 50px 0px 30px !important;
+    }
+    .services-one-sec--services{
+        padding: 50px 0px 30px !important;
+    }
+
+.footer-one__top {
+   padding: 50px 0px 50px !important;
+}
+
+.services-three__single {
+    min-height: auto !important;
+}
+.sec-title{
+    padding-bottom: 0px;
+}
+.contact-page{
+    padding : 0px 0px 50px !important;
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .services-three{
+        padding: 50px 0px 30px !important;
+    }
+      .project-three {
+    padding: 50px 0px 30px !important;
+}
+.testimonials-three {
+   padding: 50px 0px 30px !important;
+}
+
+/* About Page */
+.work-perfomance-one-sec{
+    padding: 50px 0px 30px !important;
+}
+.feature-four {
+   padding: 50px 0px 30px !important;
+}
+.feature-three-sec{
+    padding: 50px 0px 30px !important;
+}
+
+    .feature-three__tab{
+        padding : 40px 20px 40px !important;
+    }
+
+    .feature-three__tab-button{
+        padding-bottom: 30px;
+    }
+
+    /* Service */
+    .why-choose-two-sec--services{
+        margin-top : 50px;
+    }
+
+       .why-choose-two-sec {
+        padding: 50px 0px 30px !important;
+    }
+    .feature-two-sec{
+        padding: 50px 0px 30px !important;
+    }
+    .services-one-sec--services{
+        padding: 50px 0px 30px !important;
+    }
+.contact-page{
+    padding : 0px 0px 50px !important;
+}
+
+    /* Footer */
+.footer-one__top {
+   padding: 50px 0px 50px !important;
+}
 }

@@ -114,14 +114,8 @@ const MobileMenu = () => {
     <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-nav-item">
         <i className="fab fa-facebook-f"></i>
     </a>
-    <a href="https://twitter.com" target="_blank" rel="noreferrer" className="social-nav-item">
-        <i className="fab fa-twitter"></i>
-    </a>
     <a href="https://instagram.com" target="_blank" rel="noreferrer" className="social-nav-item">
         <i className="fab fa-instagram"></i>
-    </a>
-    <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-nav-item">
-        <i className="fab fa-linkedin-in"></i>
     </a>
 </div>
                 

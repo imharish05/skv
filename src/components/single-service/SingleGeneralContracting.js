@@ -1,13 +1,8 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-import ButtonBox from './ButtonBox';
-import ServiceContactBox from './ServiceContactBox';
-import ServiceSearch from './ServiceSearch';
+import React, { useEffect, useState } from 'react';
 
-export default class SingleGeneralContracting extends React.Component {
-    componentDidMount() {
+const SingleGeneralContracting = ({title}) => {
 
-        const $ = window.$;
+            const $ = window.$;
         
         if ($(".tabs-box").length) {
             $(".tabs-box .tab-buttons .tab-btn").on("click", function (e) {
@@ -39,330 +34,154 @@ export default class SingleGeneralContracting extends React.Component {
             });
         }
           
-    }
-    render(){
+
         let publicUrl = process.env.PUBLIC_URL+'/'
+
+        const [service,setService ]= useState([])
+
+        const serviceData = [
+    {
+        title: "Bowstring Girders",
+        text1: "SKV Industriees specializes in fabrication of RDSO approved Bowstring Arch Bridge Girders for Indian Railways. Our bowstring girders are fabricated using heavy structural steel with precision CNC cutting, SAW welding and full trial assembly before dispatch.",
+        text2: "Completed and ongoing bowstring girder projects for South Western Railway at Patchur, Jolarpetti and Nayandahalli with spans up to 42 metres and weights up to 275 MT per span.",
+        process_title: "Fabrication Process",
+        process_content: "Every bowstring girder goes through a strict multi-stage fabrication and quality process before site launching.",
+        process_list: [
+            "CNC plasma cutting and SAW welding to RDSO standards.",
+            "Full trial assembly and dimensional inspection at factory.",
+            "Gird blasting, metalizing and zinc chromate painting applied.",
+            "Composite girder joint processing with precision machinery.",
+            "Mobile crane launching up to 25 tonnes at site.",
+            "Spans up to 42 metres completed for South Western Railway.",
+            "RDSO approved fabrication with ISO 9001:2015 quality system."
+        ],
+        bg : "metalizing-bg.jpg",
+        img : "bowstring-grider.png",
+    },
+    {
+        title: "Metalizing",
+        text1: "SKV Industriees provides professional zinc metalizing services for heavy steel fabricated structures. Metalizing is a thermal spray process that applies a zinc coating to steel surfaces, providing long-lasting corrosion protection for railway bridges and structural steel.",
+        text2: "All metalizing work is carried out as per RDSO specifications followed by zinc chromate painting to ensure complete surface protection of fabricated girders and structures.",
+        process_title: "Metalizing Process",
+        process_content: "Our metalizing process follows strict quality control procedures ensuring maximum corrosion protection on all steel surfaces.",
+        process_list: [
+            "Sand blasting to Sa 2.5 surface preparation standard.",
+            "Zinc thermal spray metalizing applied to all steel surfaces.",
+            "Zinc chromate painting applied as final protective coat.",
+            "3 sand blasting machines of 200 litre capacity available.",
+            "3 airless spray gun machines for uniform paint application.",
+            "Heavy duty compressors at 12 bar and 8 bar pressure used.",
+            "Carried out as per RDSO specifications for railway bridges."
+        ],
+        bg : "metalizing-bg.jpg",
+        img : "metalizing.jpg",
+    },
+    {
+        title: "CNC Cutting",
+        text1: "SKV Industriees operates 2 CNC plasma cutting machines with capacity up to 300mm for precision steel plate cutting. Our CNC cutting facility ensures accurate and clean cuts for all heavy steel fabrication requirements including bridge girders, PEB structures and industrial buildings.",
+        text2: "Combined with our CNC drilling machine capable of drilling up to 62mm holes, our machining facility handles all precision fabrication requirements in-house without outsourcing.",
+        process_title: "CNC Cutting Capabilities",
+        process_content: "Our CNC facility is equipped with the latest machines ensuring precision cutting for all heavy steel fabrication projects.",
+        process_list: [
+            "2 CNC plasma cutting machines up to 300mm plate capacity.",
+            "CNC drilling machine for precision holes up to 62mm diameter.",
+            "Automatic warpage bend removal machine up to 75mm thickness.",
+            "Plasma cutting machine of 600 amps capacity available.",
+            "6 pug cutting machines and 15 magnetic core cutting machines.",
+            "Hydraulic pressing machine of 200 tonnes capacity in use.",
+            "Warpage machine of 500 tonnes for structural straightening.",
+            "15 manual gas cutting sets for on-site and shop cutting work."
+        ]
+    },
+    {
+        title: "PEB Roofing & Structures",
+        text1: "SKV Industriees designs and constructs Pre-Engineered Steel Buildings and warehouse structures for industrial, commercial and government clients. Our PEB projects range from small factory buildings to large spinning mills, cold storage plants and helicopter manufacturing facilities.",
+        text2: "Completed PEB projects include a 650 MT helicopter plant for HAL, a 140 MT loco paint shop for Southern Railway and multiple warehouses for Tamil Nadu Government Civil Supplies Department across various locations.",
+        process_title: "PEB Construction Process",
+        process_content: "Our PEB construction follows a systematic process from design to erection ensuring structural integrity and quality at every stage.",
+        process_list: [
+            "Steel fabrication with CNC cutting and auto welding machines.",
+            "EOT crane erection with 20 MT and 25 MT capacity cranes.",
+            "Roofing, cladding and painting completed to specifications.",
+            "Completed 650 MT helicopter plant for HAL at Bidrehalla Kaval.",
+            "140 MT loco paint shop delivered for Southern Railway Chennai.",
+            "Multiple warehouses built for Tamil Nadu Government Civil Supplies.",
+            "PEB spans from small 408 sqm boiler plants to 11250 sqm mills.",
+            "20+ PEB sheds completed for government and private sector clients."
+        ]
+    },
+];
+
+        useEffect(() => {
+            setService(() => serviceData.filter((item) =>item.title === title ))
+        },[title])
+
+
         return (
+
+
             <>
                 <section className="services-details-page">
                     <div className="container">
                         <div className="row">
                             {/* Start Services Details Content */}
-                            <div className="col-xl-7 col-lg-7">
-                                <div className="services-details__content">
+                            <div className="col-xl-12 col-lg-10">
+                                {service.map((item,index) => (
+                                <div className="services-details__content" key={index}>
                                     <div className="services-details__img1">
-                                        <img src={publicUrl+"assets/images/services/services-details-img1.jpg"} alt="" />
+                                        <img src={publicUrl+`assets/images/services/${item.bg}`} alt="" />
                                     </div>
                                     <div className="services-details__text-box1">
                                         <div className="title">
-                                            <h2>General Contracting</h2>
+                                            <h2>{item.title}</h2>
                                         </div>
-                                        <p className="text-1">Labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                            nexercitatiullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                            dolreprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                            Excepteur sint </p>
+                                        <p className="text-1">{item.text1}</p>
 
-                                        <p className="text-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                            voluptate </p>
+                                        <p className="text-2">{item.text2} </p>
                                     </div>
 
                                     <div className="services-details__text-box2">
                                         <div className="row">
                                             <div className="col-xl-5">
                                                 <div className="services-details__text-box2-img">
-                                                    <img src={publicUrl+"assets/images/services/services-details-img2.jpg"} alt="" />
+                                                    <img src={publicUrl+`assets/images/services/${item.img}`} className='d-none d-lg-block' alt="" />
                                                 </div>
                                             </div>
 
                                             <div className="col-xl-7">
                                                 <div className="services-details__text-box2-content">
                                                     <div className="title">
-                                                        <h2>Planning Work</h2>
+                                                        <h2>{item.process_title}</h2>
                                                     </div>
                                                     <div className="text">
-                                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                                            dolore eu fugiat </p>
+                                                        <p>{item.process_content}</p>
                                                     </div>
                                                     <ul>
-                                                        <li>
+                                                       {item.process_list.map((list,index) => (
+                                                           <li key={index}>
                                                             <div className="icon">
                                                                 <span className="icon-tick"></span>
                                                             </div>
 
                                                             <div className="text">
-                                                                <p>Ut enim ad minim veniam</p>
+                                                                <p>{list}</p>
                                                             </div>
                                                         </li>
-
-                                                        <li>
-                                                            <div className="icon">
-                                                                <span className="icon-tick"></span>
-                                                            </div>
-
-                                                            <div className="text">
-                                                                <p> voluptate velit esse cillum dolore eu </p>
-                                                            </div>
-                                                        </li>
-
-                                                        <li>
-                                                            <div className="icon">
-                                                                <span className="icon-tick"></span>
-                                                            </div>
-
-                                                            <div className="text">
-                                                                <p>Kuis nostrud exercitation ullamco </p>
-                                                            </div>
-                                                        </li>
+                                                       ))
+                                                    }
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div className="services-details__text-box3">
-                                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit quia
-                                            consequuntur magni dolores eos qui ratione volsnesciunt.Neque porro quisquam est,
-                                            qui dolorem ipsum quia dolor sit amet, consectetur, sed quia non numquam eius modi
-                                            tempora incidunt ut labore et dolore </p>
-
-                                        <ul>
-                                            <li>
-                                                <div className="icon">
-                                                    <span className="icon-tick"></span>
-                                                </div>
-
-                                                <div className="text">
-                                                    <p>Nostrud exercitation ullamco laboris consequat.reprehenderit in voluptate
-                                                    </p>
-                                                </div>
-                                            </li>
-
-                                            <li>
-                                                <div className="icon">
-                                                    <span className="icon-tick"></span>
-                                                </div>
-
-                                                <div className="text">
-                                                    <p>velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                                                        occaecat
-                                                    </p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-
-                                    {/* Start Services Details Tab Box */}
-                                    <div className="services-details__tab-box">
-                                        <div className="row">
-                                            <div className="col-xl-12">
-                                                <div className="services-details__tab tabs-box">
-                                                    <div className="services-details__tab-button">
-                                                        <ul className="tab-buttons clearfix">
-                                                            <li data-tab="#materials" className="tab-btn active-btn">
-                                                                <h4>Quality Materials</h4>
-                                                            </li>
-                                                            <li data-tab="#design " className="tab-btn">
-                                                                <h4>Interior Design</h4>
-                                                            </li>
-                                                            <li data-tab="#care" className="tab-btn">
-                                                                <h4>Personal Care</h4>
-                                                            </li>
-                                                            <li data-tab="#support" className="tab-btn">
-                                                                <h4>Super Support</h4>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-
-
-                                                    <div className="tabs-content">
-                                                        {/* Start Tab */}
-                                                        <div className="tab active-tab" id="materials">
-                                                            <div className="services-details__tab-content-item">
-                                                                <div className="quality-materials-tab-box">
-                                                                    <div className="row">
-                                                                        <div className="col-xl-6">
-                                                                            <div className="quality-materials-tab-box-img">
-                                                                                <img src={publicUrl+"assets/images/services/services-details-img3.jpg"} alt="" />
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div className="col-xl-6">
-                                                                            <div className="quality-materials-tab-box-content">
-                                                                                <p className="text1">Consequuntur magni dolores eos
-                                                                                    qui ratione volsnesciunt.Neq quisquam est,
-                                                                                    qui dolorem ipsum quia dolor sit amet,Nemo
-                                                                                    enim ipsvoluptatequia voluptas sit</p>
-
-                                                                                <p className="text2">aliquam quaerat
-                                                                                    voluptatem. consequuntur
-                                                                                    magni dolores eos qui ratione
-                                                                                    volsnesciunt.Neque porro
-                                                                                    quisquam est, qui quia dolor sit </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        {/* End Tab */}
-
-                                                        {/* Start Tab */}
-                                                        <div className="tab" id="design">
-                                                            <div className="services-details__tab-content-item">
-                                                                <div className="interior-design-tab-box">
-                                                                    <div className="row">
-                                                                        <div className="col-xl-6">
-                                                                            <div className="interior-design-tab-box-img">
-                                                                                <img src={publicUrl+"assets/images/services/services-details-img4.jpg"} alt="" />
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div className="col-xl-6">
-                                                                            <div className="interior-design-tab-box-content">
-                                                                                <p className="text1">It is a long established fact
-                                                                                    that a reader will be distracted by the
-                                                                                    readable content of a page when looking at
-                                                                                    its layout. The point of using Lorem Ipsum
-                                                                                </p>
-
-                                                                                <p className="text2">There are many variations of
-                                                                                    passages of Lorem Ipsum available, but the
-                                                                                    majority have suffered alteration in some
-                                                                                    form, </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        {/* End Tab */}
-
-                                                        {/* Start Tab */}
-                                                        <div className="tab" id="care">
-                                                            <div className="services-details__tab-content-item">
-                                                                <div className="personal-care-tab-box">
-                                                                    <div className="row">
-                                                                        <div className="col-xl-6">
-                                                                            <div className="personal-care-tab-box-img">
-                                                                                <img src={publicUrl+"assets/images/services/services-details-img5.jpg"} alt="" />
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div className="col-xl-6">
-                                                                            <div className="personal-care-tab-box-content">
-                                                                                <p className="text1">Contrary to popular belief,
-                                                                                    Lorem Ipsum is not simply random text. It
-                                                                                    has roots in a piece of classical Latin
-                                                                                    literature from 45 BC, making it over 2000
-                                                                                    years old</p>
-
-                                                                                <p className="text2">The standard chunk of Lorem
-                                                                                    Ipsum used since the 1500s is reproduced
-                                                                                    below for those interested. Sections 1.10.32
-                                                                                    and 1.10.33 from</p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        {/* End Tab */}
-
-                                                        {/* Start Tab */}
-                                                        <div className="tab" id="support">
-                                                            <div className="services-details__tab-content-item">
-                                                                <div className="super-support-tab-box">
-                                                                    <div className="row">
-                                                                        <div className="col-xl-12">
-                                                                            <div className="super-support-tab-box-form">
-                                                                                <form action="/assets/inc/sendemail.php"
-                                                                                    className="comment-one__form contact-form-validated"
-                                                                                    novalidate="novalidate">
-                                                                                    <div className="row">
-                                                                                        <div className="col-xl-6 col-lg-6">
-                                                                                            <div
-                                                                                                className="comment-form__input-box">
-                                                                                                <input type="text"
-                                                                                                    placeholder="Full name"
-                                                                                                    name="name" />
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div className="col-xl-6 col-lg-6">
-                                                                                            <div
-                                                                                                className="comment-form__input-box">
-                                                                                                <input type="email"
-                                                                                                    placeholder="Email address"
-                                                                                                    name="email" />
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div className="row">
-                                                                                        <div className="col-xl-12 col-lg-12">
-                                                                                            <div
-                                                                                                className="comment-form__input-box">
-                                                                                                <textarea name="message"
-                                                                                                    placeholder="Your Message"></textarea>
-                                                                                            </div>
-                                                                                            <button
-                                                                                                className="thm-btn comment-form__btn"
-                                                                                                data-text="Send Message +"
-                                                                                                type="submit"
-                                                                                                data-loading-text="Please wait...">Send
-                                                                                                Message
-                                                                                                +</button>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </form>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        {/* End Tab */}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {/* End Services Details Tab Box */}
                                 </div>
+                                ))}
                             </div>
-                            {/* End Services Details Content */}
-
-                            {/* Start Services Details Sidebar */}
-                            <div className="col-xl-5 col-lg-5">
-                                <div className="services-details__sidebar">
-                                    <ServiceSearch />
-
-                                    {/* Start Services Details Sidebar Single */}
-                                    <div className="services-details__sidebar-single services-details-category">
-                                        <div className="title">
-                                            <h2>Services Category</h2>
-                                        </div>
-                                        <ul className="services-details-category-list">
-                                            <li><Link to={process.env.PUBLIC_URL + `/general-contracting`} className="active">General Contracting
-                                                <span className="icon-right-arrow"></span></Link>
-                                            </li>
-                                            <li><Link to={process.env.PUBLIC_URL + `/metrial-managment`}>Metrial Managment<span className="icon-right-arrow"></span></Link></li>
-                                            <li><Link to={process.env.PUBLIC_URL + `/building-renovation`}>Building Renovation<span className="icon-right-arrow"></span></Link></li>
-                                            <li><Link to={process.env.PUBLIC_URL + `/architecture-design`}>Architecture Design<span className="icon-right-arrow"></span></Link></li>
-                                            <li><Link to={process.env.PUBLIC_URL + `/multistory-build`}>Multistory Build<span className="icon-right-arrow"></span></Link></li>
-                                        </ul>
-                                    </div>
-                                    {/* End Services Details Sidebar Single */}
-
-                                    <ButtonBox />
-                                    <ServiceContactBox />
-                                </div>
-                            </div>
-                            {/* End Services Details Sidebar */}
                         </div>
                     </div>
                 </section>
             </>
         )
-    }
 }
+
+export default SingleGeneralContracting;

@@ -29,7 +29,7 @@ export default class HeroOne extends React.Component {
         let publicUrl = process.env.PUBLIC_URL+'/'
         return (
             <>
-                <section className="slider-one-sec style3">
+                <section className="slider-one-sec style3" style={{overflow : "hidden"}}>
                     <div className="slider-carousel owl-carousel owl-theme">
                         
                         {/* Slide 1: Focus on General Fabrication & CNC */}

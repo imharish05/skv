@@ -6,7 +6,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 const FloatingContact = () => {
     const [isVisible, setIsVisible] = useState(false);
     const location = useLocation();
-    const phoneNumber = "1234567890"; 
+    const phoneNumber = "+918883999999"; 
 
     const isHomePage = location.pathname === "/" || location.pathname === "/home";
 
@@ -27,7 +27,7 @@ const FloatingContact = () => {
     return (
         <div className='floating-container'>
             {/* WhatsApp - Original Green */}
-            <a href={`https://wa.me/${phoneNumber}`} 
+            <a href={`https://wa.me/${phoneNumber}?text=Hello,%20I%20would%20like%20to%20enquire%20about%20your%20steel%20fabrication%20services.`} 
                className="btn-floating btn-whatsapp text-white shadow-lg" 
                target="_blank" rel="noopener noreferrer">
                 <IoLogoWhatsapp/>
